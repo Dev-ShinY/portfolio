@@ -3,11 +3,17 @@ import type { Configuration } from "webpack";
 
 import path from "path";
 
+type ExtendedConfiguration = Configuration & {
+  resolve: {
+    alias: {
+      [key: string]: string;
+    };
+  };
+};
+
 const nextConfig: NextConfig = {
-  webpack: (config: Configuration) => {
-    if (config.resolve && config.resolve.alias) {
-      config.resolve.alias["@"] = path.resolve(__dirname);
-    }
+  webpack: (config: ExtendedConfiguration) => {
+    config.resolve.alias["@"] = path.resolve(__dirname);
     return config;
   },
 
