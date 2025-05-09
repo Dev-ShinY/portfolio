@@ -64,7 +64,7 @@ export default function DarkMode() {
           Vampires are afraid of sun<b>light.</b> <br />
           Superman are afraid of kryptho<b>nite.</b> <br />
           Programmer are afraid of <b>light</b> IDE. <br />
-          So you can't turn off dark mode.
+          So you can&apos;t turn off dark mode.
         </motion.div>
       )}
     </motion.label>

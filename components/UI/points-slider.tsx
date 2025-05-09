@@ -18,6 +18,7 @@ export default function AnimatedPointsSlider({ points }: Points) {
   return (
     <div className={clsx("w-full")}>
       <div className={clsx("flex", "justify-start", "gap-3")}>
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {points.map((_: any, index: number) => {
           const isNext = index === selectedIndex + 1;
 
@@ -58,7 +59,6 @@ export default function AnimatedPointsSlider({ points }: Points) {
           );
         })}
       </div>
-
       <SlideWrapper
         index={selectedIndex}
         direction={direction}

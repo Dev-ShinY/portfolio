@@ -38,7 +38,7 @@ export default function ProjectModal({
     return () => {
       setScrollEnabled(true);
     };
-  }, [selectedKey]);
+  }, [selectedKey, setScrollEnabled]);
 
   // data fetch
   useEffect(() => {
@@ -58,6 +58,7 @@ export default function ProjectModal({
         setProjectData(data);
 
         try {
+          /* eslint-disable @typescript-eslint/no-require-imports */
           const img = require(`@/assets${data.mainImg}`).default;
           setImagePath(img.src);
         } catch {

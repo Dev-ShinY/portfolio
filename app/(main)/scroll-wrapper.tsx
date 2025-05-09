@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, MotionStyle, useAnimation } from "framer-motion";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect } from "react";
 import { useScrollStore } from "@/stores/store";
 import { indexTitle } from "@/data/portfolioData";
 import { useIsMobile } from "@/hooks/useIsMobile";
