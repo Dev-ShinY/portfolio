@@ -37,7 +37,7 @@ export default function Projects() {
       )}
     >
       {projects.map((item, index) => {
-        /* eslint-disable @typescript-eslint/no-require-imports */
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         const imagePath = require(`@/assets${item.mainImg}`).default;
 
         return (
