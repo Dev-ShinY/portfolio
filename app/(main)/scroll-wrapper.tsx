@@ -63,9 +63,21 @@ export default function ScrollWrapper({
   );
 
   useEffect(() => {
-    if (isMobile) return;
+    const isInsideModal = (event: WheelEvent) =>
+      event.target instanceof Element && !!event.target.closest("[data-modal]");
 
-    scrollToSection(currentIndex); // 페이지 로드 시 초기 섹션으로 이동
+    const handlePreventScroll = (event: WheelEvent) => {
+      if (isInsideModal(event)) {
+        event.preventDefault();
+      }
+    };
+
+    if (isMobile) {
+      window.addEventListener("wheel", handlePreventScroll, { passive: false });
+      return () => window.removeEventListener("wheel", handlePreventScroll);
+    }
+
+    scrollToSection(currentIndex);
     window.addEventListener("wheel", handleWheel, { passive: false });
     return () => window.removeEventListener("wheel", handleWheel);
   }, [currentIndex, isMobile]);

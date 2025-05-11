@@ -49,6 +49,7 @@ export default function MobileCategory({ sections }: { sections: Props[] }) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            data-modal
             className={clsx(
               "fixed",
               "top-0",
