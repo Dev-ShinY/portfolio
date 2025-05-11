@@ -19,7 +19,7 @@ export default function Header() {
         "sticky",
         "flex",
         "justify-between",
-        "bg-black/20",
+        "bg-black/90",
         "w-full",
         "p-3",
         "top-0",
