@@ -11,7 +11,7 @@ export default function ScrollWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  const { currentIndex, scrollEnabled, setCurrentIndex } = useScrollStore();
+  const { currentIndex, setCurrentIndex } = useScrollStore();
   const controls = useAnimation();
   const isMobile = useIsMobile();
   let scrollTimeout: NodeJS.Timeout | null = null;
@@ -68,7 +68,7 @@ export default function ScrollWrapper({
     scrollToSection(currentIndex); // 페이지 로드 시 초기 섹션으로 이동
     window.addEventListener("wheel", handleWheel, { passive: false });
     return () => window.removeEventListener("wheel", handleWheel);
-  }, [currentIndex, isMobile, scrollEnabled]);
+  }, [currentIndex, isMobile]);
 
   const scrollWrapperStyle: MotionStyle = {
     position: "fixed",

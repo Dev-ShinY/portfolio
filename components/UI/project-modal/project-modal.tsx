@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { Project } from "@/types/type";
 import SectionBlock from "./SectionBlock";
 import LabelBlock from "./LabelBlock";
-import { useScrollStore } from "@/stores/store";
 import useEscapeToClear from "@/hooks/useEscapeToClear";
 
 interface ProjectModalProps {
@@ -24,21 +23,7 @@ export default function ProjectModal({
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
   const [imagePath, setImagePath] = useState<string | undefined>(undefined);
-  const { setScrollEnabled } = useScrollStore();
   useEscapeToClear(setSelectedKey);
-
-  // 스크롤 비활성화 처리
-  useEffect(() => {
-    if (selectedKey) {
-      setScrollEnabled(false);
-    } else {
-      setScrollEnabled(true);
-    }
-
-    return () => {
-      setScrollEnabled(true);
-    };
-  }, [selectedKey, setScrollEnabled]);
 
   // data fetch
   useEffect(() => {
