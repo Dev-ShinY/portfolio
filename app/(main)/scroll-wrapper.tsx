@@ -63,10 +63,10 @@ export default function ScrollWrapper({
   );
 
   useEffect(() => {
-    const isInsideModal = (event: WheelEvent) =>
+    const isInsideModal = (event: Event) =>
       event.target instanceof Element && !!event.target.closest("[data-modal]");
 
-    const handlePreventScroll = (event: WheelEvent) => {
+    const handlePreventScroll = (event: Event) => {
       if (isInsideModal(event)) {
         event.preventDefault();
       }
@@ -74,7 +74,14 @@ export default function ScrollWrapper({
 
     if (isMobile) {
       window.addEventListener("wheel", handlePreventScroll, { passive: false });
-      return () => window.removeEventListener("wheel", handlePreventScroll);
+      window.addEventListener("touchmove", handlePreventScroll, {
+        passive: false,
+      });
+
+      return () => {
+        window.removeEventListener("wheel", handlePreventScroll);
+        window.removeEventListener("touchmove", handlePreventScroll);
+      };
     }
 
     scrollToSection(currentIndex);
