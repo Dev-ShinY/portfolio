@@ -44,7 +44,7 @@ export async function GET(req: NextRequest) {
       });
     } catch (err) {
       return NextResponse.json(
-        { error: "Fallback image fetch failed" },
+        { error: "[Fallback image fetch failed] " + err },
         { status: 500 }
       );
     }
