@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createCanvas, loadImage } from "canvas";
+import sharp from "sharp";
 
 /**
- * 이미지 파일를 canvas를 활용하여 최빈색을 추출
+ * 이미지 파일를 sharp를 활용하여 최빈색을 추출
  * @param {NextRequest} req - 이미지 파일
  * @returns {Promise<NextResponse>} 최빈색 rgb값의 JSON
  */
@@ -19,21 +19,15 @@ export async function POST(req: NextRequest) {
     // image load
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
-    const img = await loadImage(buffer);
 
-    // Canvas 설정
-    const canvas = createCanvas(img.width, img.height);
-    const ctx = canvas.getContext("2d");
-    canvas.width = img.width;
-    canvas.height = img.height;
-    ctx.drawImage(img, 0, 0, img.width, img.height);
+    const { data: imageData, info } = await sharp(buffer)
+      .raw()
+      .toBuffer({ resolveWithObject: true });
 
-    // 픽셀 데이터 추출
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
     const colorCount: Record<string, number> = {};
 
     // 32픽셀 간격 샘플링 (성능 이슈)
-    for (let i = 0; i < imageData.length; i += 32) {
+    for (let i = 0; i < imageData.length; i += info.channels * 32) {
       const r = imageData[i];
       const g = imageData[i + 1];
       const b = imageData[i + 2];

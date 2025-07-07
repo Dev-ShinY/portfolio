@@ -66,7 +66,7 @@ const setStoredColors = (colors: Record<string, string>) => {
  */
 export function useDominantColor(icon: string) {
   const theme = "dark";
-  const imgSrc = `/api/icon-image/${icon}?theme=${theme}`;
+  const imgSrc = `/api/icon-image?icon=${icon}&theme=${theme}`;
 
   const [dominantColor, setDominantColor] = useState<string>("#333");
 

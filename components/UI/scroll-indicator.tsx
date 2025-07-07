@@ -46,7 +46,6 @@ export default function ScrollIndicator() {
                 "hidden",
                 "md:inline"
               )}
-              initial={{ opacity: 0 }}
               animate={{ opacity: hoverIndex === index ? 1 : 0 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >

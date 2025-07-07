@@ -24,28 +24,33 @@ export default function ScrollWrapper({
       window.history.pushState(null, "", hash);
     }
 
-    if (isMobile) {
-      window.scrollTo({ top: index * window.innerHeight, behavior: "auto" });
-    } else {
-      controls.start({
-        y: -index * window.innerHeight,
-        transition: { duration: 0.8, ease: "easeInOut" },
-      });
-    }
+    controls.start({
+      y: -index * window.innerHeight,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    });
   };
 
-  const handleWheel = useCallback(
-    (event: WheelEvent) => {
-      const isInsideModal =
-        event.target instanceof Element &&
-        !!event.target.closest("[data-modal]");
+  useEffect(() => {
+    const isInsideModal = (event: Event) =>
+      event.target instanceof Element && !!event.target.closest("[data-modal]");
 
-      // 모달 스크롤 무시
-      if (isInsideModal) {
-        return;
+    // Wheel 전용 핸들러 (desktop or mobile 공통)
+    const handleWheelMobile = (event: WheelEvent) => {
+      if (isInsideModal(event)) {
+        event.preventDefault();
       }
+    };
 
-      // 디바운스 방지: 여러 번 스크롤 이벤트가 발생하지 않도록
+    //Touch 전용 핸들러 (mobile only)
+    const handleTouchMoveMobile = (event: TouchEvent) => {
+      if (isInsideModal(event)) {
+        event.preventDefault();
+      }
+    };
+
+    const handleWheelDesktop = (event: WheelEvent) => {
+      if (isInsideModal(event)) return;
+
       if (scrollTimeout) clearTimeout(scrollTimeout);
 
       scrollTimeout = setTimeout(() => {
@@ -53,40 +58,30 @@ export default function ScrollWrapper({
         const nextIndex = Math.min(
           Math.max(currentIndex + direction, 0),
           indexTitle.length - 1
-        ); // 섹션 범위 제한
+        );
         if (nextIndex !== currentIndex) {
           scrollToSection(nextIndex);
         }
-      }, 150); // 150ms 간격으로만 한 번의 스크롤 이동 처리
-    },
-    [currentIndex]
-  );
-
-  useEffect(() => {
-    const isInsideModal = (event: Event) =>
-      event.target instanceof Element && !!event.target.closest("[data-modal]");
-
-    const handlePreventScroll = (event: Event) => {
-      if (isInsideModal(event)) {
-        event.preventDefault();
-      }
+      }, 150);
     };
 
     if (isMobile) {
-      window.addEventListener("wheel", handlePreventScroll, { passive: false });
-      window.addEventListener("touchmove", handlePreventScroll, {
+      window.addEventListener("wheel", handleWheelMobile, { passive: false });
+      window.addEventListener("touchmove", handleTouchMoveMobile, {
         passive: false,
       });
 
       return () => {
-        window.removeEventListener("wheel", handlePreventScroll);
-        window.removeEventListener("touchmove", handlePreventScroll);
+        window.removeEventListener("wheel", handleWheelMobile);
+        window.removeEventListener("touchmove", handleTouchMoveMobile);
       };
-    }
+    } else {
+      scrollToSection(currentIndex);
 
-    scrollToSection(currentIndex);
-    window.addEventListener("wheel", handleWheel, { passive: false });
-    return () => window.removeEventListener("wheel", handleWheel);
+      window.addEventListener("wheel", handleWheelDesktop, { passive: false });
+
+      return () => window.removeEventListener("wheel", handleWheelDesktop);
+    }
   }, [currentIndex, isMobile]);
 
   const scrollWrapperStyle: MotionStyle = {
@@ -97,10 +92,7 @@ export default function ScrollWrapper({
     height: "100%",
   };
   return (
-    <motion.div
-      style={isMobile ? {} : scrollWrapperStyle}
-      animate={isMobile ? {} : controls}
-    >
+    <motion.div style={isMobile ? {} : scrollWrapperStyle} animate={controls}>
       {children}
     </motion.div>
   );

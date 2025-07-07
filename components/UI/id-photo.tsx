@@ -3,12 +3,15 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import Image from "next/image";
 import idPhoto from "@/assets/it-is-me.png";
 
 export default function IdPhoto() {
   const [isHovered, setIsHovered] = useState(false);
   const mobileIdSize = 150;
+
+  const isMobile = useIsMobile();
 
   return (
     <motion.div
@@ -33,7 +36,7 @@ export default function IdPhoto() {
           "absolute",
           "-top-3",
           "-left-3",
-          "z-10"
+          !isMobile && "z-10"
         )}
         style={{ "--mobile-size": `${mobileIdSize}px` } as React.CSSProperties}
         animate={{ x: isHovered ? -10 : 0, y: isHovered ? -10 : 0 }}

@@ -26,9 +26,9 @@ export default function Header() {
         "z-10"
       )}
     >
-      <text className={clsx("text-shiny-neutral-100", "flex", "items-center")}>
+      <span className={clsx("text-shiny-neutral-100", "flex", "items-center")}>
         프론트엔드 신윤성
-      </text>
+      </span>
 
       {/* desktop screen */}
       <ul

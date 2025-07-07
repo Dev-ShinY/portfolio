@@ -16,15 +16,6 @@ const nextConfig: NextConfig = {
     config.resolve.alias["@"] = path.resolve(__dirname);
     return config;
   },
-
-  async rewrites() {
-    return [
-      {
-        source: "/api/icon-image/:path*",
-        destination: "https://skillicons.dev/icons?i=:path*",
-      },
-    ];
-  },
 };
 
 export default nextConfig;

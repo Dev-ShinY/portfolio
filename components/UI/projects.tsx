@@ -93,7 +93,7 @@ export default function Projects() {
                   "gap-y-[6px]",
                   "m-5",
                   "h-[45%]",
-                  "z-10"
+                  "md:z-10"
                 )}
               >
                 {item.skill.map((item) => (

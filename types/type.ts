@@ -35,7 +35,11 @@ export type Project = {
       reason: string;
     };
   };
-  retrospective: { title: string; content: string }[];
+  retrospective: {
+    title: string;
+    content: string[];
+    result: string[];
+  }[];
   mainImg: string;
   screenshots: { description: string; imageUrl: string }[];
 };

@@ -278,14 +278,21 @@ export const projects = [
       "Tailwind CSS",
       "Framer Motion",
       "GraphQL",
-      "Typescript",
+      "TypeScript",
     ],
   },
   {
     id: "discordMusicBot",
     title: "디스코드 노래봇 개발",
     mainImg: "/projects-img/project-main-4.webp",
-    skill: ["Node.js", "Discord.js", "discord-player"],
+    skill: [
+      "Node.js",
+      "TypeScript",
+      "Discord.js",
+      "discord-player",
+      "Docker",
+      "GitHub Actions",
+    ],
   },
   {
     id: "logisticsSystem",
@@ -293,11 +300,13 @@ export const projects = [
     mainImg: "/projects-img/project-main-5.webp",
     skill: [
       "Python",
-      "Scrapy",
-      "Selenium",
-      "BeautifulSoup",
-      "PostgreSQL",
       "Pandas",
+      "PostgreSQL",
+      "Vue.js",
+      "Vuex",
+      "Vuetify",
+      "Chart.js",
+      "Leaflet.js",
     ],
   },
   {
@@ -317,48 +326,95 @@ export const projects = [
     id: "dataVoucherDashboard",
     title: "데이터 바우처 사업\n대시보드 개발",
     mainImg: "/projects-img/project-main-7.webp",
-    skill: ["Vue.js", "Chart.js", "Leaflet.js", "Vuex", "Vuetify"],
+    skill: ["React", "Vue.js", "Next.js", "Leaflet.js"],
   },
 ];
 
 export const projectDetails: ProjectDetails = {
   portfolioSite: {
     title: "포트폴리오 사이트 제작",
-    duration: "2023.08 - 진행 중",
+    duration: "2025.02 - 진행 중",
     team: "1인 (솔로)",
     type: ["솔로", "반응형", "포트폴리오"],
     description:
-      "Next.js와 Framer Motion을 활용하여 직관적인 UX를 제공하는 포트폴리오 사이트를 개발. 심플한 디자인과 애니메이션을 결합하여 브랜드 아이덴티티를 강화.",
+      "Next.js App Router와 Framer Motion을 활용해 섹션 기반 인터랙션과 사용자 맞춤 색상 경험을 제공하는 포트폴리오 사이트를 제작. 직관적인 레이아웃과 동적인 애니메이션을 통해 포트폴리오의 정보를 효과적으로 전달",
     contributions: [
-      { role: "기획 & 디자인", details: "UI/UX 설계 및 브랜드 컨셉 디자인" },
+      { role: "기획 & 디자인", details: "UI/UX 설계 디자인" },
       { role: "프론트엔드 개발", details: "Next.js와 Tailwind CSS 활용" },
-      { role: "SEO 최적화", details: "SSR/SSG를 활용한 성능 최적화" },
+      {
+        role: "접근성 & 최적화",
+        details: "커스텀 훅 기반 반응형 처리 및 SSR 기반 렌더링 퍼포먼스 개선",
+      },
     ],
     features: [
-      "GitHub, Velog 바로가기",
-      "프로젝트 상세보기 모달",
-      "반응형 웹 디자인 적용",
+      "Framer Motion 기반의 섹션 전환 및 진입 애니메이션 구현",
+      "Array의 길이에 맞는 N각형 SVG 생성 및 회전 효과로 시각적 몰입도 향상",
+      "커스텀 훅으로 이미지 기반 최빈 색상 추출 후 텍스트 대비 자동 조정",
+      "모바일/데스크탑에 따른 ScrollWrapper 분기처리 및 반응형 대응",
     ],
     skills: {
       NextJS: {
-        purpose: "SEO 최적화 및 서버사이드 렌더링",
-        reason: "빠른 로딩 속도와 검색 엔진 노출 향상을 위해 사용",
+        purpose: "서버사이드 렌더링과 앱 라우터 기반의 구조적인 페이지 설계",
+        reason:
+          "폴더 기반 라우팅과 컴포넌트 재사용성을 통해 유지보수성과 개발 생산성을 높이기 위해 사용",
       },
       TypeScript: {
-        purpose: "정적 타입 시스템 제공",
-        reason: "코드 안정성을 높이고 유지보수를 용이하게 하기 위해 사용",
+        purpose: "정적 타입 시스템 도입을 통한 코드 안정성 확보",
+        reason:
+          "타입 기반 개발을 통해 런타임 에러를 사전에 방지하고 협업 및 리팩토링을 용이하게 하기 위해 사용",
       },
       TailwindCSS: {
-        purpose: "유틸리티 기반 스타일링",
-        reason: "반응형 디자인과 빠른 개발을 위해 적용",
+        purpose: "유틸리티 클래스 기반의 빠르고 일관된 스타일링 제공",
+        reason:
+          "반응형 웹 구현과 유틸리티 기반 스타일링과 빠르고 일관된 스타일링을 위해 사용",
       },
       FramerMotion: {
-        purpose: "부드러운 애니메이션 효과 제공",
-        reason: "사용자 경험(UX) 개선을 위해 활용",
+        purpose:
+          "페이지 전환, 섹션 진입, 인터랙션 효과 등 다양한 애니메이션 처리",
+        reason:
+          "자연스럽고 부드러운 모션을 통해 사용자 경험(UX)을 향상시키기 위해 사용",
+      },
+      zustand: {
+        purpose: "경량 상태 관리 라이브러리로 컴포넌트 간 상태 공유 처리",
+        reason:
+          "Redux 대비 설정이 간단하고, 전역 상태를 가볍게 관리할 수 있어 유지보수성과 확장성 향상을 위해 사용",
       },
     },
     retrospective: [
-      { title: "디자인 개선 과정", content: "유저 피드백을 반영해 UI 개선" },
+      {
+        title: "동적 색상 추출 로직의 난이도와 성취감",
+        content: [
+          "useDominantColor와 useTextColor 커스텀 훅 구현",
+          "캔버스를 사용하여 이미지에서 최빈색 추출",
+          "휘도(Y = 0.299R + 0.587G + 0.114B) 계산을 기반으로 텍스트 색상 자동 결정",
+        ],
+        result: [
+          "어두운 배경엔 밝은 텍스트, 밝은 배경엔 어두운 텍스트 제공",
+          "시각적 가독성 개선 + 사용자 맞춤 스킬셋 색상 제공",
+        ],
+      },
+      {
+        title: "SVG 애니메이션을 통한 시각적 몰입감 향상",
+        content: [
+          "배열 길이에 맞는 N각형 SVG 생성 및 회전 애니메이션 구현",
+          "Framer Motion과 결합하여 시각적 인터랙션 강화",
+        ],
+        result: [
+          "사용자에게 몰입감 있는 인터랙티브 시각 효과 제공",
+          "단순한 UI 구성요소를 동적인 비주얼로 확장",
+        ],
+      },
+      {
+        title: "Framer Motion의 확장성과 퍼포먼스 최적화 경험",
+        content: [
+          "섹션 전환 및 등장 애니메이션에 Framer Motion 적극 활용",
+          "스크롤 트리거와 뷰포트 진입 감지를 통한 애니메이션 최적화",
+        ],
+        result: [
+          "퍼포먼스에 영향을 최소화하면서 부드러운 사용자 경험 제공",
+          "재사용 가능한 애니메이션 컴포넌트 구조 확립",
+        ],
+      },
     ],
     mainImg: "/projects-img/project-main-1.webp",
     screenshots: [
@@ -369,328 +425,587 @@ export const projectDetails: ProjectDetails = {
     ],
   },
   diseaseDashboard: {
-    title: "해외 감염병\n연구 대시보드 구축",
-    duration: "2024.02 - 진행 중",
+    title: "해외 감염병 연구 대시보드 구축",
+    duration: "2020.07 - 2021.01",
     team: "2인",
-    type: ["데이터 시각화", "대시보드"],
+    type: ["팀", "대시보드", "시각화", "실시간 데이터"],
     description:
-      "질병 발생 데이터를 시각화하여 인사이트를 제공하는 대시보드 개발. 실시간 API 연동을 통해 최신 데이터를 반영.",
+      "세계 각국의 감염병 관련 문서를 수집하고, 이를 실시간으로 시각화하여 질병 발생 현황을 모니터링할 수 있는 대시보드를 구축. Leaflet.js와 Chart.js를 활용하여 국가별 질병 발생량과 다양한 인사이트를 시각적으로 제공",
     contributions: [
-      { role: "백엔드 API 설계", details: "FastAPI로 데이터 처리" },
+      { role: "프론트엔드 개발", details: "Vue 및 Vuetify 기반 대시보드 구성" },
       {
-        role: "프론트엔드 개발",
-        details: "React와 Recharts 활용한 데이터 시각화",
+        role: "데이터 시각화",
+        details: "Leaflet.js와 Chart.js를 통한 지도 및 차트 시각화 구현",
+      },
+      {
+        role: "API 연동",
+        details: "REST API를 통한 실시간 질병 데이터 연동 및 자동 갱신 처리",
       },
     ],
-    features: ["실시간 데이터 반영", "대시보드 UI/UX 최적화"],
+    features: [
+      "Leaflet.js를 활용한 국가별 질병 발생률 색상 시각화",
+      "Chart.js 기반의 감염병 통계 차트 구성 (라인, 바, 파이)",
+      "Vuetify 기반 반응형 UI 설계 및 사용자 편의성 고려한 대시보드 배치",
+      "Vuex를 활용한 전역 상태 관리 및 실시간 데이터 동기화",
+    ],
     skills: {
-      React: {
-        purpose: "컴포넌트 기반 UI 개발",
-        reason: "재사용성이 높은 UI 구성 및 상태 관리를 위해 사용",
+      Vue: {
+        purpose: "컴포넌트 기반 UI 개발을 위한 프레임워크",
+        reason: "복잡한 대시보드 UI를 효율적으로 구성하고 관리하기 위해 사용",
       },
-      TypeScript: {
-        purpose: "정적 타입 검사를 통한 안정성 확보",
-        reason: "런타임 오류를 줄이고 유지보수를 쉽게 하기 위해 적용",
-      },
-      Recharts: {
-        purpose: "데이터 시각화 라이브러리",
-        reason: "심플한 구조의 차트를 빠르게 구현하기 위해 활용",
+      Vuetify: {
+        purpose: "Material Design 기반의 UI 컴포넌트 제공",
+        reason: "일관된 디자인 시스템과 반응형 레이아웃 구성을 위해 사용",
       },
       LeafletJS: {
-        purpose: "지도 시각화 라이브러리",
-        reason: "질병 발생 지역을 지도 위에 시각적으로 표현하기 위해 사용",
+        purpose: "인터랙티브한 지도 시각화를 위한 JavaScript 라이브러리",
+        reason:
+          "국가별 감염병 데이터를 직관적으로 표현하고 공간적 인사이트 제공을 위해 사용",
       },
-      FastAPI: {
-        purpose: "백엔드 API 서버 구축",
-        reason: "빠르고 효율적인 Python 기반 API 서버 구현을 위해 사용",
+      ChartJS: {
+        purpose: "감염병 통계를 시각적으로 전달하기 위한 차트 라이브러리",
+        reason:
+          "다양한 데이터 유형에 맞춘 시각화로 사용자의 이해를 돕기 위해 사용",
+      },
+      Vuex: {
+        purpose: "전역 상태 관리 및 컴포넌트 간 데이터 공유 처리",
+        reason: "실시간 데이터 갱신 및 상태 변화에 대한 통합 관리를 위해 사용",
       },
     },
     retrospective: [
       {
-        title: "실시간 데이터 처리 최적화",
-        content: "API 요청 수를 줄이는 캐싱 적용",
+        title: "지도 시각화를 통한 공간적 인사이트 제공",
+        content: [
+          "Leaflet.js를 사용해 세계 지도를 구성하고 감염병 발생 수를 색상으로 시각화",
+          "각 국가에 마우스를 올리면 발생 질병 정보 툴팁 제공",
+        ],
+        result: [
+          "사용자가 국가별 감염병 현황을 한눈에 파악 가능",
+          "공간 기반 정보 전달의 효과적 구현 경험",
+        ],
+      },
+      {
+        title: "Chart.js 기반 통계 시각화 경험",
+        content: [
+          "월별, 연도별 감염병 발생 추이 라인 차트 구현",
+          "질병 분류별 비율을 파이 차트로 구성",
+        ],
+        result: [
+          "데이터를 시각적으로 전달하여 인사이트 도출 가능",
+          "차트 간 연동 및 필터링 기능 구현 경험 축적",
+        ],
+      },
+      {
+        title: "실시간 데이터 갱신 처리",
+        content: [
+          "REST API에서 일정 주기로 데이터를 자동 갱신",
+          "Vuex로 상태 관리하여 컴포넌트 간 동기화 처리",
+        ],
+        result: [
+          "최신 데이터를 지속적으로 반영하여 신뢰성 확보",
+          "API 트래픽 및 렌더링 성능 고려한 최적화 경험",
+        ],
       },
     ],
     mainImg: "/projects-img/project-main-2.webp",
     screenshots: [
       {
-        description: "대시보드 메인 화면",
-        imageUrl: "https://example.com/disease_dashboard.png",
+        description: "질병 발생 지도 시각화 페이지",
+        imageUrl: "https://example.com/disease_map.png",
+      },
+      {
+        description: "감염병 추이 분석 차트 페이지",
+        imageUrl: "https://example.com/disease_chart.png",
       },
     ],
   },
   companyWebsite: {
     title: "사내 홈페이지 리뉴얼",
-    duration: "2023.11 - 2023.12",
-    team: "3인",
-    type: ["팀 프로젝트", "웹사이트 리뉴얼"],
+    duration: "2024.07 - 2024.09",
+    team: "2인",
+    type: ["팀", "홈페이지 리뉴얼", "관리자 페이지"],
     description:
-      "기존 정적 웹사이트를 React 기반으로 리뉴얼하여 유지보수성과 반응성을 개선하고, 관리자 페이지를 추가해 콘텐츠 관리 효율화.",
+      "AI 기반 디자인 검색엔진 서비스를 소개하는 공식 홈페이지를 구축. 사용자가 직관적으로 서비스를 이해할 수 있도록 구성된 메인 페이지와, 내부 운영자가 콘텐츠를 직접 관리할 수 있는 관리자 페이지를 함께 개발. Next.js, GraphQL, Tailwind CSS, Framer Motion 등 최신 프론트엔드 기술을 활용하여 퍼포먼스와 유지보수성을 높인 프로젝트",
     contributions: [
-      { role: "프론트엔드 개발", details: "공통 컴포넌트 및 라우팅 구조 설계" },
-      { role: "디자인 개선", details: "UI 요소 정리 및 반응형 구조 개선" },
+      {
+        role: "프론트엔드 개발",
+        details: "전체 페이지 구현 및 반응형 대응, 디자인 제외 전담",
+      },
+      {
+        role: "관리자 페이지 개발",
+        details: "사내 콘텐츠를 수정할 수 있는 관리자 UI 개발",
+      },
+      {
+        role: "GraphQL 연동",
+        details: "GraphQL 기반 API 통신 및 데이터 바인딩 구현",
+      },
     ],
     features: [
-      "관리자 페이지 구축",
-      "반응형 레이아웃",
-      "팀원 간 코드 리뷰 및 Git Flow 적용",
+      "AI 디자인 검색엔진의 주요 기능과 흐름을 소개하는 구조적 페이지 구성",
+      "Framer Motion을 활용한 인터랙션 중심의 애니메이션 효과 적용",
+      "GraphQL을 통해 필요한 데이터만 효율적으로 요청 및 렌더링",
+      "관리자 페이지에서 페이지 콘텐츠(텍스트, 이미지 등) 직접 수정 가능",
+      "Tailwind 기반 반응형 레이아웃으로 모든 디바이스에 대응",
     ],
     skills: {
-      React: {
-        purpose: "재사용 가능한 UI 구현",
-        reason: "컴포넌트 기반 개발로 유지보수를 쉽게 하기 위해 사용",
+      NextJS: {
+        purpose: "정적/동적 페이지 구성과 최적화된 렌더링 처리",
+        reason:
+          "빠른 페이지 전환과 SEO 대응을 위해 App Router 기반의 구조를 사용",
       },
       TypeScript: {
-        purpose: "정적 타입으로 안정성 확보",
-        reason: "팀 프로젝트에서 협업 시 오류를 줄이기 위해 적용",
+        purpose: "정적 타입 기반 안정적인 코드 구현",
+        reason:
+          "런타임 오류 예방과 협업 및 유지보수의 용이성을 확보하기 위해 사용",
       },
-      Zustand: {
-        purpose: "전역 상태 관리",
-        reason: "복잡하지 않은 상태를 간결하게 관리하기 위해 선택",
+      TailwindCSS: {
+        purpose: "클래스 기반의 빠르고 일관된 스타일링 제공",
+        reason: "디자인 시스템 없이도 유연하고 일관성 있는 UI 구현을 위해 사용",
       },
-      SCSS: {
-        purpose: "스타일링",
-        reason: "모듈화된 스타일 적용과 유지보수를 위해 사용",
+      FramerMotion: {
+        purpose: "부드러운 섹션 전환과 인터랙션 효과 구현",
+        reason:
+          "자연스러운 모션을 통해 사용자 몰입도를 높이고 현대적인 UI를 표현하기 위해 사용",
+      },
+      GraphQL: {
+        purpose: "선택적 데이터 요청 및 클라이언트 최적화",
+        reason:
+          "불필요한 데이터 요청을 줄이고 컴포넌트 단위로 필요한 데이터를 효율적으로 불러오기 위해 사용",
       },
     },
     retrospective: [
       {
-        title: "협업 프로세스 개선",
-        content: "PR 리뷰 기반으로 코드 품질과 커뮤니케이션 능력 향상",
+        title: "서비스 흐름을 중심으로 한 구조적 설계 경험",
+        content: [
+          "AI 디자인 검색엔진의 특징과 사용 흐름을 시각적으로 강조",
+          "단순한 소개가 아닌 기능 중심의 이해를 돕는 콘텐츠 배치",
+        ],
+        result: [
+          "사용자가 서비스 목적과 기능을 직관적으로 이해할 수 있는 구조 완성",
+          "브랜드 메시지를 명확하게 전달하는 데 성공",
+        ],
+      },
+      {
+        title: "GraphQL 기반 데이터 설계와 클라이언트 최적화",
+        content: [
+          "GraphQL 쿼리 및 뮤테이션 설계와 데이터 연동 로직 구현",
+          "불필요한 네트워크 요청을 줄이고 UI 성능 최적화",
+        ],
+        result: [
+          "컴포넌트별 필요한 데이터만 효율적으로 로드",
+          "API 설계와 클라이언트 렌더링의 유연성 확보",
+        ],
+      },
+      {
+        title: "관리자 페이지 UI 구성 및 기능 구현",
+        content: [
+          "비개발자가 직접 콘텐츠를 수정할 수 있도록 UI/UX 구성",
+          "섹션별 텍스트 및 이미지 업로드/수정 기능 구현",
+        ],
+        result: [
+          "운영팀의 실시간 콘텐츠 관리 가능",
+          "홈페이지 유지보수 비용 절감 및 효율화",
+        ],
       },
     ],
     mainImg: "/projects-img/project-main-3.webp",
     screenshots: [
       {
-        description: "홈페이지 리뉴얼 메인 화면",
+        description: "사내 홈페이지 메인 화면",
         imageUrl: "https://example.com/company_main.png",
+      },
+      {
+        description: "관리자 페이지 콘텐츠 수정 화면",
+        imageUrl: "https://example.com/company_admin.png",
       },
     ],
   },
   discordMusicBot: {
     title: "디스코드 노래봇 개발",
-    duration: "2024.01 - 2024.01",
-    team: "1인 (솔로)",
-    type: ["봇 개발", "커뮤니티 툴"],
+    duration: "2024.02 - 2024.03",
+    team: "1인 (토이 프로젝트)",
+    type: ["토이 프로젝트", "디스코드 봇", "음악 스트리밍"],
     description:
-      "특정 채널에 명령어를 입력하면 YouTube 영상을 재생하는 디스코드 봇을 개발. 명령어 처리와 음악 재생 기능을 분리하여 구조화.",
+      "친구들과 디스코드 상에서 코드 리뷰를 하면서 음악을 함께 듣기 위해 개발한 개인용 노래봇. 사용자가 채널에 음악 제목을 입력하면 유튜브에서 검색하여 스트리밍 재생이 가능하며, 대기열, 일시정지, 스킵 등 다양한 컨트롤 기능도 제공. `discord.js` 및 `discord-player` 기반으로 개발되었으며, GitHub Actions와 Docker를 활용해 개인 서버에 배포하여 24시간 안정적으로 운영 중.",
     contributions: [
-      { role: "봇 기획 및 설계", details: "명령어 구조 및 큐 시스템 구성" },
       {
-        role: "개발",
-        details: "`discord.js`와 `discord-player`를 활용한 음악 재생 기능 구현",
+        role: "봇 개발 및 배포",
+        details: "디스코드 봇의 명령어 처리 및 음악 재생 기능 구현",
+      },
+      {
+        role: "유저 인터랙션 설계",
+        details:
+          "슬래시 명령어 기반의 UX 설계 및 사용자 친화적 인터페이스 구축",
+      },
+      {
+        role: "CI/CD 및 서버 호스팅",
+        details:
+          "GitHub Actions + Docker 조합으로 개인 서버에 자동 배포 및 24시간 호스팅",
       },
     ],
-    features: ["유튜브 기반 음악 검색 및 재생", "재생목록 큐 시스템"],
+    features: [
+      "디스코드 채널 내에서 명령어 입력을 통한 음악 검색 및 재생 기능",
+      "슬래시 명령어 기반의 직관적인 명령 시스템",
+      "재생/정지/스킵/대기열 등 다양한 컨트롤 명령 제공",
+      "Docker 기반 이미지로 패키징하여 안정적인 서버 운영 가능",
+      "GitHub Actions를 활용한 자동 테스트 및 서버 배포",
+    ],
     skills: {
-      NodeJS: {
-        purpose: "백엔드 실행 환경",
-        reason: "비동기 기반의 빠른 명령 처리와 봇 운영을 위해 사용",
-      },
-      DiscordJS: {
-        purpose: "디스코드 봇 프레임워크",
-        reason: "사용자 명령어 처리와 이벤트 제어를 위해 사용",
+      discordJS: {
+        purpose: "디스코드 봇의 핵심 기능 구현",
+        reason: "디스코드 API와의 통합을 위해 공식 라이브러리 사용",
       },
       discordPlayer: {
-        purpose: "음악 스트리밍 라이브러리",
-        reason: "YouTube와 Spotify 재생 기능을 손쉽게 구현하기 위해 사용",
+        purpose: "유튜브 음악 스트리밍 및 재생 컨트롤 기능 구현",
+        reason: "복잡한 음악 큐 및 재생 관리를 효율적으로 구현하기 위해 사용",
       },
       TypeScript: {
-        purpose: "타입 안정성 확보",
-        reason: "명령어 관리와 봇 구조의 유지보수를 위해 적용",
+        purpose: "코드의 안정성과 유지보수성 향상",
+        reason: "런타임 에러를 줄이고 명확한 타입 기반 개발을 위해 도입",
+      },
+      NodeJS: {
+        purpose: "봇 서버 구동 및 비동기 로직 처리",
+        reason: "이벤트 기반 서버 사이드 처리를 위해 사용",
+      },
+      Docker: {
+        purpose: "봇을 컨테이너로 패키징하여 배포 환경 일관성 확보",
+        reason: "서버 재시작에도 안정적으로 봇을 운영하기 위해 사용",
+      },
+      GitHubActions: {
+        purpose: "CI/CD 자동화 및 서버 배포 프로세스 구성",
+        reason: "개발 후 자동 빌드/배포 과정을 통해 운영 효율성 향상",
       },
     },
     retrospective: [
       {
-        title: "명령어 구조화",
-        content: "기능별로 파일을 분리하여 유지보수성과 확장성을 높임",
+        title: "슬래시 명령어와 큐 관리 구현 경험",
+        content: [
+          "명령어 입력 시 실시간 음악 재생 및 큐 상태 반영",
+          "예외 상황에 대한 메시지 피드백 처리",
+        ],
+        result: [
+          "사용자에게 직관적이고 반응성 높은 인터페이스 제공",
+          "디스코드 봇 개발의 기초부터 운영까지 전반적 경험 확보",
+        ],
+      },
+      {
+        title: "CI/CD 자동화 및 안정적인 봇 운영",
+        content: [
+          "GitHub Actions로 코드 푸시 시 자동으로 Docker 빌드 및 배포",
+          "개인 서버에서 Docker 컨테이너 기반으로 24시간 안정적 운영",
+        ],
+        result: [
+          "버전 관리 및 배포 효율성 대폭 향상",
+          "개인 서버의 자원을 활용한 서비스 운영 경험 확보",
+        ],
       },
     ],
     mainImg: "/projects-img/project-main-4.webp",
     screenshots: [
       {
-        description: "봇 명령어 입력 예시",
-        imageUrl: "https://example.com/discord_bot.png",
+        description: "디스코드 채널 내 음악 명령 사용 예시",
+        imageUrl: "https://example.com/discord_music_command.png",
       },
     ],
   },
   logisticsSystem: {
     title: "물류센터 최적입지 선정 시스템 구축",
-    duration: "2023.06 - 2023.08",
-    team: "3인",
-    type: ["데이터 수집 및 분석", "시스템 개발"],
+    duration: "2024.03 - 2024.05",
+    team: "2인",
+    type: ["팀", "시각화", "데이터 전처리", "입지 분석"],
     description:
-      "전국 마트 및 배송정보 데이터를 수집하여, 물류 거점의 최적 입지를 도출하는 분석 시스템을 구축. 파이썬 기반으로 데이터 수집 및 전처리, 시각화를 수행.",
+      "전국 공장 부지 데이터를 기반으로 최적 입지를 선정할 수 있는 대시보드를 구축. 구조가 제각각인 다양한 CSV 파일을 전처리 후 PostgreSQL에 적재하고, 이를 Vue 기반의 대시보드에서 시각화하여 정책 결정과 입지 판단에 도움을 주는 시스템 개발",
     contributions: [
       {
-        role: "크롤러 개발",
-        details: "Scrapy와 Selenium을 이용해 전국 마트 및 배송 정보 수집",
+        role: "데이터 전처리 및 적재",
+        details:
+          "Python과 Pandas를 활용해 다양한 구조의 CSV 데이터를 정제하고, 스키마를 통합하여 PostgreSQL에 적재",
       },
       {
-        role: "데이터 분석",
-        details: "Pandas 기반 전처리 및 입지 분석 알고리즘 개발",
+        role: "프론트엔드 개발",
+        details:
+          "Vue, Vuetify 기반의 반응형 대시보드 구축 및 상태 관리를 위한 Vuex 활용",
       },
       {
-        role: "DB 연동 및 결과 시각화",
-        details: "PostgreSQL과 연계하여 시각화 기반 대시보드 구축",
+        role: "지도 및 차트 시각화",
+        details:
+          "Leaflet.js와 Chart.js를 활용하여 지도 기반 입지 시각화 및 주요 수치 정보 제공",
       },
     ],
     features: [
-      "마트/배송 정보 수집 자동화",
-      "입지 선정 알고리즘 구현",
-      "시각화 기반 대시보드 제공",
+      "구조가 제각각인 CSV 파일 통합 전처리 및 스키마 정규화",
+      "PostgreSQL 기반 데이터 저장 및 쿼리 최적화",
+      "Leaflet.js 기반 공장 부지 밀도 시각화 (색상 기반 시각 인사이트 제공)",
+      "Chart.js 기반 지표별 시계열 그래프 구현",
+      "Vuex 기반 사용자 인터랙션 반영 실시간 필터 및 정보 조회 기능",
     ],
     skills: {
       Python: {
-        purpose: "전체 시스템 구현",
-        reason: "빠른 프로토타이핑과 데이터 처리에 적합해서 사용",
-      },
-      Scrapy: {
-        purpose: "정형 크롤링",
-        reason: "구조화된 웹 페이지에서 마트 위치 데이터 수집을 위해 사용",
-      },
-      Selenium: {
-        purpose: "동적 데이터 수집",
-        reason: "동적으로 로드되는 배송 정보 페이지 크롤링을 위해 사용",
-      },
-      BeautifulSoup: {
-        purpose: "HTML 파싱",
-        reason: "간단한 텍스트 추출과 HTML 구조 분석을 위해 사용",
-      },
-      PostgreSQL: {
-        purpose: "DB 저장 및 쿼리",
-        reason: "지리정보 및 대용량 데이터 처리에 적합하여 선택",
+        purpose: "데이터 파싱, 정제 및 자동화된 전처리 스크립트 개발",
+        reason:
+          "복잡한 CSV 구조를 자동으로 정리하고 통합할 수 있도록 스크립트 기반 자동화를 위해 사용",
       },
       Pandas: {
-        purpose: "데이터 전처리 및 분석",
-        reason: "복잡한 데이터 가공 및 분석 알고리즘 적용을 위해 사용",
+        purpose: "데이터 정제 및 통계 분석",
+        reason:
+          "누락값 처리, 열 변환, 그룹핑 등의 데이터 전처리를 효율적으로 수행하기 위해 사용",
+      },
+      PostgreSQL: {
+        purpose: "정제된 데이터를 저장하고 쿼리를 통한 데이터 활용",
+        reason:
+          "구조화된 데이터 저장과 빠른 질의 응답을 위한 관계형 데이터베이스 사용",
+      },
+      Vue: {
+        purpose: "대시보드 UI 구축을 위한 프론트엔드 프레임워크",
+        reason:
+          "컴포넌트 기반 개발로 유지보수가 용이하고, 빠르게 데이터 시각화 화면을 구성하기 위해 사용",
+      },
+      Vuetify: {
+        purpose: "디자인 시스템 기반의 빠른 UI 구성",
+        reason:
+          "Vue에 최적화된 머티리얼 디자인 컴포넌트를 통해 일관된 UI 구현을 위해 사용",
+      },
+      Vuex: {
+        purpose: "상태 관리 및 컴포넌트 간 데이터 공유",
+        reason:
+          "복잡한 데이터 흐름을 예측 가능하게 만들고, 컴포넌트 간 상태 공유를 효율적으로 처리하기 위해 사용",
+      },
+      Leaflet: {
+        purpose: "지도 기반의 입지 데이터 시각화",
+        reason:
+          "공장 위치 및 밀도를 직관적으로 보여주기 위한 시각화 도구로 사용",
+      },
+      ChartJS: {
+        purpose: "지표 기반 차트 시각화",
+        reason: "데이터 흐름과 비교 분석을 시각적으로 표현하기 위해 사용",
       },
     },
     retrospective: [
       {
-        title: "데이터 수집 자동화 경험",
-        content:
-          "정적/동적 웹 페이지 크롤링 자동화를 구현하며 크롤링 환경에 따라 도구를 적절히 선택하는 능력을 길렀습니다.",
+        title: "복잡한 CSV 전처리를 통한 데이터 통합 경험",
+        content: [
+          "지역별 구조가 상이한 CSV 파일 다수를 Pandas로 파싱 및 정제",
+          "단일 스키마로 통일하고 누락된 값 보정, 이상치 제거 처리",
+          "PostgreSQL 테이블 스키마 설계 및 대량 삽입(Bulk Insert) 자동화",
+        ],
+        result: [
+          "데이터 일관성 확보 및 확장성 있는 DB 구조 완성",
+          "재사용 가능한 데이터 파이프라인 템플릿 확보",
+        ],
+      },
+      {
+        title: "지도 시각화를 통한 입지 분석 강화",
+        content: [
+          "Leaflet을 통해 공장 위치 및 밀도 시각화",
+          "시군구 기준 색상 범례 구성 및 필터 기능 구현",
+          "차트 기반의 시간별 공장 가동률 등 부가 지표 구현",
+        ],
+        result: [
+          "정책 결정에 도움되는 시각적 인사이트 제공",
+          "사용자 중심의 직관적인 정보 전달 구현",
+        ],
       },
     ],
     mainImg: "/projects-img/project-main-5.webp",
     screenshots: [
       {
-        description: "수집된 마트/배송 정보 시각화",
+        description: "입지 후보지 분포 시각화 화면",
         imageUrl: "https://example.com/logistics_map.png",
       },
     ],
   },
   luxuryCrawling: {
     title: "웹 크롤링 - 명품 패션 검색엔진 구축",
-    duration: "2024.06 - 2024.07",
-    team: "1인 (솔로)",
-    type: ["웹 크롤링", "데이터 수집 및 처리"],
+    duration: "2024.05 - 2024.07",
+    team: "3인",
+    type: ["팀", "데이터 수집", "크롤링 시스템"],
     description:
-      "여러 명품 브랜드 사이트로부터 제품 정보를 크롤링하고, 품목/가격/이미지 기반으로 정제하여 검색 가능한 형태로 가공. 카테고리 분류 및 브랜드별 인기 상품 분석 기능도 구현.",
+      "국내외 명품 브랜드 공식 사이트 및 유통 채널을 대상으로 크롤링 시스템을 구축하고, 매일 생성되는 데이터를 수집, 전처리, 가공 후 DB에 적재하는 파이프라인을 구축. 추후 검색 기반 서비스를 위한 기초 데이터를 안정적으로 확보하기 위해 설계",
     contributions: [
       {
-        role: "데이터 수집 자동화",
-        details: "브랜드별 크롤링 로직 설계 및 유지보수",
+        role: "웹 크롤링",
+        details: "Python 기반의 Scrapy 및 Selenium 활용한 크롤링 로직 구현",
       },
       {
-        role: "검색엔진 기초 설계",
-        details: "브랜드/카테고리/가격 필터링 기능 구현",
+        role: "데이터 전처리",
+        details:
+          "Pandas를 활용해 다양한 구조의 HTML/JSON 데이터를 정제 및 통합",
+      },
+      {
+        role: "DB 연동",
+        details: "PostgreSQL 스키마 설계 및 데이터 적재 자동화 파이프라인 구현",
       },
     ],
     features: [
-      "명품 브랜드별 정보 수집",
-      "검색 필터 기능",
-      "카테고리 기반 분류",
+      "브랜드별 크롤러를 모듈화하여 확장성과 유지보수 용이성 확보",
+      "일일 자동 실행을 위한 스케줄링 시스템 구성 (cron)",
+      "카테고리/가격/색상/브랜드 기준 정규화된 DB 저장 구조 설계",
+      "크롤링 실패나 구조 변경에 대응하는 예외 처리 로직 포함",
     ],
     skills: {
       Python: {
-        purpose: "전체 크롤링 시스템 구현",
-        reason: "다양한 크롤링 라이브러리와 연계해 사용",
+        purpose: "웹 크롤러 및 데이터 가공 스크립트 구현",
+        reason:
+          "Scrapy, Selenium, Pandas 등 다양한 라이브러리를 활용하기 위해 선택",
+      },
+      Scrapy: {
+        purpose: "크롤링 프레임워크로 브랜드별 크롤러 구성",
+        reason:
+          "비동기 방식의 효율적인 데이터 수집과 구조화된 코드 설계를 위해 사용",
       },
       Selenium: {
-        purpose: "동적 페이지 처리",
-        reason: "자바스크립트 기반 사이트에서 데이터 추출을 위해 사용",
-      },
-      BeautifulSoup: {
-        purpose: "HTML 정적 파싱",
-        reason: "간단한 구조의 페이지에서 빠른 크롤링을 위해 사용",
+        purpose: "동적 로딩 사이트에서의 데이터 수집",
+        reason: "JavaScript 렌더링이 필요한 브랜드 페이지 크롤링을 위해 사용",
       },
       Pandas: {
-        purpose: "데이터 정제 및 구조화",
-        reason: "상품 속성 정리와 통계 기반 분류 작업에 사용",
+        purpose: "데이터 정제 및 통합 처리",
+        reason:
+          "다양한 형식의 수집 데이터를 정규화된 구조로 변환하기 위해 사용",
+      },
+      PostgreSQL: {
+        purpose: "정제된 데이터의 저장 및 검색 최적화",
+        reason:
+          "정규화된 데이터 구조와 확장 가능한 쿼리 환경을 제공하기 위해 사용",
+      },
+      cron: {
+        purpose: "일일 크롤링 자동 실행을 위한 스케줄링",
+        reason: "지속적인 데이터 수집을 자동화하기 위해 사용",
       },
     },
     retrospective: [
       {
-        title: "유지보수 가능한 크롤링 구조 설계",
-        content: "브랜드별 스크래퍼 클래스를 분리하여 관리 비용을 줄임",
+        title: "데이터 파이프라인 설계 경험",
+        content: [
+          "Scrapy → Pandas → PostgreSQL 흐름의 자동화 파이프라인 설계",
+          "매일 실행되어도 중복 없이 누적되는 구조 설계",
+        ],
+        result: [
+          "안정적인 데이터 적재 및 검색 서비스 기반 확보",
+          "운영 단계에서도 유지보수가 쉬운 구조 확립",
+        ],
+      },
+      {
+        title: "웹 구조 변화 대응을 위한 전략 설계",
+        content: [
+          "XPath, CSS Selector 병행 사용으로 유연한 구조 대응",
+          "에러 로깅 및 크롤링 실패 자동 감지 기능 추가",
+        ],
+        result: [
+          "변화하는 브랜드 웹 구조에도 유연하게 대처 가능",
+          "시스템 장애 최소화 및 데이터 신뢰성 확보",
+        ],
       },
     ],
     mainImg: "/projects-img/project-main-6.webp",
     screenshots: [
       {
-        description: "명품 브랜드 검색 페이지",
-        imageUrl: "https://example.com/luxury_search.png",
+        description: "브랜드별 데이터 구조를 시각화한 다이어그램",
+        imageUrl: "https://example.com/luxury_data_architecture.png",
       },
     ],
   },
   dataVoucherDashboard: {
     title: "데이터 바우처 사업 대시보드 개발",
-    duration: "2024.09 - 2024.10",
-    team: "개인",
-    type: ["사내 프로젝트", "프론트엔드 대시보드"],
+    duration: "2023.04 - 2024.12",
+    team: "1인 (솔로)",
+    type: ["솔로", "대시보드", "기업 프로젝트"],
     description:
-      "정부의 데이터 바우처 사업을 지원하기 위한 대시보드를 개발. 이 대시보드는 데이터를 효율적으로 관리하고, 사용자가 필요한 정보를 빠르게 확인할 수 있도록 다양한 필터와 차트를 제공.",
+      "데이터 바우처 사업의 다양한 수혜기업들을 대상으로 프로젝트 성격에 맞는 대시보드를 구축. React, Vue, Next.js 등 기술 스택을 유연하게 선택해 데이터 시각화 및 사용자 친화적인 인터페이스 제공. 모든 개발은 단독으로 진행되었으며, 데이터 구조 분석부터 UI 설계, 배포까지 전 과정을 책임.",
     contributions: [
       {
-        role: "전체 개발",
-        details: "프론트엔드 프로젝트 설계 및 구현",
+        role: "프론트엔드 개발",
+        details: "React, Vue, Next.js 기반의 유연한 대시보드 설계 및 구축",
       },
       {
-        role: "차트 및 대시보드 구성",
+        role: "데이터 시각화",
         details:
-          "사용자에게 직관적으로 데이터를 시각화하기 위해 다양한 차트와 필터 기능을 개발",
+          "Chart.js, Leaflet.js 등을 활용한 데이터 시각화 및 지도 기반 표현",
+      },
+      {
+        role: "설계 및 유지보수",
+        details: "다양한 클라이언트 요구에 따라 구조 및 UI 커스터마이징",
       },
     ],
     features: [
-      "실시간 데이터 시각화",
-      "다양한 필터 기능 제공",
-      "사용자 맞춤형 대시보드 구성",
-      "정부 데이터 바우처 사업 지원",
+      "다양한 기술 스택 기반의 대시보드 템플릿 구성 및 프로젝트별 맞춤 개발",
+      "클라이언트 요구사항에 맞는 인터페이스와 데이터 흐름 구성",
+      "React/Vue의 컴포넌트 구조를 기반으로 빠른 유지보수 및 확장성 확보",
+      "Next.js 기반 SSR을 활용한 검색 최적화 및 초기 로딩 속도 개선",
+      "Leaflet.js를 활용한 지도 기반 데이터 시각화 기능 구현",
     ],
     skills: {
-      VueJS: {
-        purpose: "프론트엔드 개발",
-        reason: "빠르고 효율적인 SPA 개발을 위해 사용",
+      React: {
+        purpose: "컴포넌트 기반 구조를 통한 UI 설계",
+        reason: "재사용성과 생산성을 높이기 위해 사용",
       },
-      Vuex: {
-        purpose: "상태 관리",
-        reason:
-          "애플리케이션의 상태를 관리하고 효율적으로 데이터를 처리하기 위해 사용",
+      Vue: {
+        purpose: "직관적인 템플릿 기반 프레임워크로 유연한 구성 제공",
+        reason: "빠른 구현과 유지보수가 필요한 프로젝트에 적합하여 사용",
+      },
+      NextJS: {
+        purpose: "SSR 및 App Router 기반의 구조적 페이지 구성",
+        reason: "빠른 초기 로딩 속도 및 SEO 최적화를 위해 사용",
+      },
+      TypeScript: {
+        purpose: "정적 타입으로 코드 안정성과 유지보수성 확보",
+        reason: "런타임 에러 방지 및 협업 효율 향상을 위해 사용",
       },
       ChartJS: {
-        purpose: "차트 시각화",
+        purpose: "데이터 기반의 시각화 제공",
         reason:
-          "데이터를 시각적으로 표현하여 사용자가 쉽게 이해할 수 있도록 도입",
+          "막대, 선형, 파이 등 다양한 형태의 데이터 시각화가 가능하여 사용",
       },
       LeafletJS: {
-        purpose: "지도 시각화",
-        reason: "위치 기반 데이터를 지도에 표시하기 위해 사용",
-      },
-      Vuetify: {
-        purpose: "UI 컴포넌트 라이브러리",
-        reason: "빠르고 일관성 있는 UI 개발을 위해 사용",
+        purpose: "지도 기반 인터페이스로 위치 기반 데이터 시각화",
+        reason:
+          "지역/지리적 요소를 시각적으로 표현하여 사용자의 이해도를 높이기 위해 사용",
       },
     },
     retrospective: [
       {
-        title: "차트 및 데이터 시각화 최적화",
-        content:
-          "대시보드의 차트를 최적화하여 데이터 로딩 속도를 개선하고, 많은 데이터를 효율적으로 처리할 수 있도록 성능을 향상시킴",
+        title: "단독 개발로 얻은 전체 프로세스 경험",
+        content: [
+          "프레임워크 선정, 구조 설계, 상태관리, 시각화, 배포 등 전체 흐름을 주도",
+          "프로젝트별 요구사항에 따른 UI/UX 조정 및 기능 최적화",
+        ],
+        result: [
+          "대시보드 개발 역량 강화 및 다양한 기술 스택에 대한 실전 경험 축적",
+          "클라이언트 만족도 높은 결과물을 지속적으로 제공",
+        ],
+      },
+      {
+        title: "복수 프레임워크 운영의 유연성 확보",
+        content: [
+          "React, Vue, Next.js 각각의 강점을 이해하고 요구사항에 맞게 선택 적용",
+          "코드 구조와 상태관리 방식에 대한 비교 경험 확보",
+        ],
+        result: [
+          "기술 선택의 유연성을 바탕으로 다양한 프로젝트 대응 가능",
+          "기술 스택 확장성과 개인 성장에 큰 도움",
+        ],
+      },
+      {
+        title: "Leaflet.js 기반 시각화의 효용성",
+        content: [
+          "지역 단위의 데이터 분포를 시각적으로 표현",
+          "사용자가 즉시 인사이트를 얻을 수 있도록 지도 중심의 UI 구성",
+        ],
+        result: [
+          "복잡한 데이터를 직관적으로 전달 가능",
+          "클라이언트의 만족도와 이해도를 높이는 요소로 작용",
+        ],
       },
     ],
     mainImg: "/projects-img/project-main-7.webp",
-    screenshots: [],
+    screenshots: [
+      {
+        description: "Vue 기반 대시보드 예시",
+        imageUrl: "https://example.com/voucher_vue_dashboard.png",
+      },
+      {
+        description: "Next.js 기반 대시보드 예시",
+        imageUrl: "https://example.com/voucher_next_dashboard.png",
+      },
+    ],
   },
 };

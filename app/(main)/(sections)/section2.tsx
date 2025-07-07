@@ -51,16 +51,24 @@ export default function Section2() {
 
   return (
     <section
-      id="section2z"
+      id="section2"
       className={clsx(
         "w-full",
         "min-h-screen",
         "flex-center",
-        "text-shiny-neutral-300"
+        "text-shiny-neutral-300",
+        "bg-shiny-neutral-700"
       )}
     >
       <article
-        className={clsx("flex", "flex-col", "md:w-[1000px]", "h-full", "px-5")}
+        className={clsx(
+          "flex",
+          "flex-col",
+          "md:w-[1000px]",
+          "h-full",
+          "px-5",
+          "py-10"
+        )}
       >
         <h3
           className={clsx(

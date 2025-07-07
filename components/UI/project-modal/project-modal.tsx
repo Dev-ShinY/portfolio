@@ -9,6 +9,7 @@ import { Project } from "@/types/type";
 import SectionBlock from "./SectionBlock";
 import LabelBlock from "./LabelBlock";
 import useEscapeToClear from "@/hooks/useEscapeToClear";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface ProjectModalProps {
   setSelectedKey: React.Dispatch<React.SetStateAction<string | null>>;
@@ -24,6 +25,7 @@ export default function ProjectModal({
   const [error, setError] = useState<boolean>(false);
   const [imagePath, setImagePath] = useState<string | undefined>(undefined);
   useEscapeToClear(setSelectedKey);
+  const isMobile = useIsMobile();
 
   // data fetch
   useEffect(() => {
@@ -63,7 +65,7 @@ export default function ProjectModal({
       className={clsx(
         "w-screen",
         "h-screen",
-        "absolute",
+        !isMobile ? "absolute" : "fixed top-0 left-0",
         "inset-0",
         "z-30",
         "flex",
@@ -151,7 +153,9 @@ export default function ProjectModal({
               {projectData.duration + " (" + projectData.team + ")"}
             </p>
 
-            <div className={clsx("bg-white", "p-3", "w-[70%]", "rounded-xl")}>
+            <div
+              className={clsx("bg-white", "p-3", "md:w-[70%]", "rounded-xl")}
+            >
               <img
                 src={imagePath}
                 loading="lazy"
@@ -171,7 +175,7 @@ export default function ProjectModal({
             className={clsx(
               "flex-center",
               "flex-col",
-              "w-[70%]",
+              "md:w-[70%]",
               "m-auto",
               "gap-5",
               "px-5",
@@ -245,7 +249,40 @@ export default function ProjectModal({
                 <LabelBlock
                   key={index}
                   title={item.title}
-                  content={<span>· {item.content}</span>}
+                  content={
+                    <div className="space-y-2">
+                      <div>
+                        <p className="font-semibold">핵심 내용</p>
+                        <ul
+                          className={clsx(
+                            "list-disc",
+                            "list-inside",
+                            "text-sm",
+                            "text-shiny-neutral-700"
+                          )}
+                        >
+                          {item.content.map((point: string, i: number) => (
+                            <li key={i}>{point}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold">기여도 및 효과</p>
+                        <ul
+                          className={clsx(
+                            "list-disc",
+                            "list-inside",
+                            "text-sm",
+                            "text-shiny-neutral-700"
+                          )}
+                        >
+                          {item.result.map((point: string, i: number) => (
+                            <li key={i}>{point}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  }
                 />
               ))}
             </SectionBlock>

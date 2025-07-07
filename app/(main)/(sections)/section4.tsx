@@ -12,7 +12,8 @@ export default function Section4() {
         "relative",
         "flex-center",
         "bg-shiny-neutral-700",
-        "flex-col"
+        "flex-col",
+        "py-10"
       )}
     >
       <p

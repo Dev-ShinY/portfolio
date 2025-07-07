@@ -94,7 +94,7 @@ export default function Section3() {
         "w-full",
         "relative",
         "flex-center",
-        "bg-shiny-neutral-700"
+        "bg-shiny-neutral-900"
       )}
     >
       <article

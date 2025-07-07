@@ -13,7 +13,8 @@ export default function Section5() {
         "w-full",
         "flex-center",
         "text-center",
-        "relative"
+        "relative",
+        "bg-shiny-neutral-900"
       )}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

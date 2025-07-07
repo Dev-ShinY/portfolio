@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "@/styles/globals.css";
 
 const FONT = localFont({
+  display: "swap",
   src: [
     {
       path: "./fonts/Pretendard-Black.otf",
