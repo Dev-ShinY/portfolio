@@ -37,6 +37,7 @@ const skills = [
   { icon: "axios", name: "Axios" },
   { icon: "scss", name: "SCSS" },
   { icon: "vuex", name: "Vuex" },
+  { icon: "github-actions", name: "Github Actions" },
 ];
 
 /**
