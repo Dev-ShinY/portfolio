@@ -326,7 +326,14 @@ export const projects = [
     id: "dataVoucherDashboard",
     title: "데이터 바우처 사업\n대시보드 개발",
     mainImg: "/projects-img/project-main-7.webp",
-    skill: ["React", "Vue.js", "Next.js", "Leaflet.js"],
+    skill: [
+      "React",
+      "Vue.js",
+      "Next.js",
+      "TypeScript",
+      "Chart.js",
+      "Leaflet.js",
+    ],
   },
 ];
 
@@ -352,34 +359,39 @@ export const projectDetails: ProjectDetails = {
       "커스텀 훅으로 이미지 기반 최빈 색상 추출 후 텍스트 대비 자동 조정",
       "모바일/데스크탑에 따른 ScrollWrapper 분기처리 및 반응형 대응",
     ],
-    skills: {
-      NextJS: {
+    skills: [
+      {
+        skill: "Next.js",
         purpose: "서버사이드 렌더링과 앱 라우터 기반의 구조적인 페이지 설계",
         reason:
           "폴더 기반 라우팅과 컴포넌트 재사용성을 통해 유지보수성과 개발 생산성을 높이기 위해 사용",
       },
-      TypeScript: {
+      {
+        skill: "TypeScript",
         purpose: "정적 타입 시스템 도입을 통한 코드 안정성 확보",
         reason:
           "타입 기반 개발을 통해 런타임 에러를 사전에 방지하고 협업 및 리팩토링을 용이하게 하기 위해 사용",
       },
-      TailwindCSS: {
+      {
+        skill: "Tailwind CSS",
         purpose: "유틸리티 클래스 기반의 빠르고 일관된 스타일링 제공",
         reason:
           "반응형 웹 구현과 유틸리티 기반 스타일링과 빠르고 일관된 스타일링을 위해 사용",
       },
-      FramerMotion: {
+      {
+        skill: "Framer Motion",
         purpose:
           "페이지 전환, 섹션 진입, 인터랙션 효과 등 다양한 애니메이션 처리",
         reason:
           "자연스럽고 부드러운 모션을 통해 사용자 경험(UX)을 향상시키기 위해 사용",
       },
-      zustand: {
+      {
+        skill: "Zustand",
         purpose: "경량 상태 관리 라이브러리로 컴포넌트 간 상태 공유 처리",
         reason:
           "Redux 대비 설정이 간단하고, 전역 상태를 가볍게 관리할 수 있어 유지보수성과 확장성 향상을 위해 사용",
       },
-    },
+    ],
     retrospective: [
       {
         title: "동적 색상 추출 로직의 난이도와 성취감",
@@ -448,30 +460,35 @@ export const projectDetails: ProjectDetails = {
       "Vuetify 기반 반응형 UI 설계 및 사용자 편의성 고려한 대시보드 배치",
       "Vuex를 활용한 전역 상태 관리 및 실시간 데이터 동기화",
     ],
-    skills: {
-      Vue: {
+    skills: [
+      {
+        skill: "Vue.js",
         purpose: "컴포넌트 기반 UI 개발을 위한 프레임워크",
         reason: "복잡한 대시보드 UI를 효율적으로 구성하고 관리하기 위해 사용",
       },
-      Vuetify: {
+      {
+        skill: "Vuetify",
         purpose: "Material Design 기반의 UI 컴포넌트 제공",
         reason: "일관된 디자인 시스템과 반응형 레이아웃 구성을 위해 사용",
       },
-      LeafletJS: {
+      {
+        skill: "Leaflet.js",
         purpose: "인터랙티브한 지도 시각화를 위한 JavaScript 라이브러리",
         reason:
           "국가별 감염병 데이터를 직관적으로 표현하고 공간적 인사이트 제공을 위해 사용",
       },
-      ChartJS: {
+      {
+        skill: "Chart.js",
         purpose: "감염병 통계를 시각적으로 전달하기 위한 차트 라이브러리",
         reason:
           "다양한 데이터 유형에 맞춘 시각화로 사용자의 이해를 돕기 위해 사용",
       },
-      Vuex: {
+      {
+        skill: "VueX",
         purpose: "전역 상태 관리 및 컴포넌트 간 데이터 공유 처리",
         reason: "실시간 데이터 갱신 및 상태 변화에 대한 통합 관리를 위해 사용",
       },
-    },
+    ],
     retrospective: [
       {
         title: "지도 시각화를 통한 공간적 인사이트 제공",
@@ -547,32 +564,37 @@ export const projectDetails: ProjectDetails = {
       "관리자 페이지에서 페이지 콘텐츠(텍스트, 이미지 등) 직접 수정 가능",
       "Tailwind 기반 반응형 레이아웃으로 모든 디바이스에 대응",
     ],
-    skills: {
-      NextJS: {
+    skills: [
+      {
+        skill: "Next.js",
         purpose: "정적/동적 페이지 구성과 최적화된 렌더링 처리",
         reason:
           "빠른 페이지 전환과 SEO 대응을 위해 App Router 기반의 구조를 사용",
       },
-      TypeScript: {
+      {
+        skill: "TypeScript",
         purpose: "정적 타입 기반 안정적인 코드 구현",
         reason:
           "런타임 오류 예방과 협업 및 유지보수의 용이성을 확보하기 위해 사용",
       },
-      TailwindCSS: {
+      {
+        skill: "Tailwind CSS",
         purpose: "클래스 기반의 빠르고 일관된 스타일링 제공",
         reason: "디자인 시스템 없이도 유연하고 일관성 있는 UI 구현을 위해 사용",
       },
-      FramerMotion: {
+      {
+        skill: "Framer Motion",
         purpose: "부드러운 섹션 전환과 인터랙션 효과 구현",
         reason:
           "자연스러운 모션을 통해 사용자 몰입도를 높이고 현대적인 UI를 표현하기 위해 사용",
       },
-      GraphQL: {
+      {
+        skill: "GraphQL",
         purpose: "선택적 데이터 요청 및 클라이언트 최적화",
         reason:
           "불필요한 데이터 요청을 줄이고 컴포넌트 단위로 필요한 데이터를 효율적으로 불러오기 위해 사용",
       },
-    },
+    ],
     retrospective: [
       {
         title: "서비스 흐름을 중심으로 한 구조적 설계 경험",
@@ -650,32 +672,38 @@ export const projectDetails: ProjectDetails = {
       "Docker 기반 이미지로 패키징하여 안정적인 서버 운영 가능",
       "GitHub Actions를 활용한 자동 테스트 및 서버 배포",
     ],
-    skills: {
-      discordJS: {
+    skills: [
+      {
+        skill: "Discord.js",
         purpose: "디스코드 봇의 핵심 기능 구현",
         reason: "디스코드 API와의 통합을 위해 공식 라이브러리 사용",
       },
-      discordPlayer: {
+      {
+        skill: "Discord Player",
         purpose: "유튜브 음악 스트리밍 및 재생 컨트롤 기능 구현",
         reason: "복잡한 음악 큐 및 재생 관리를 효율적으로 구현하기 위해 사용",
       },
-      TypeScript: {
+      {
+        skill: "TypeScript",
         purpose: "코드의 안정성과 유지보수성 향상",
         reason: "런타임 에러를 줄이고 명확한 타입 기반 개발을 위해 도입",
       },
-      NodeJS: {
+      {
+        skill: "Node.js",
         purpose: "봇 서버 구동 및 비동기 로직 처리",
         reason: "이벤트 기반 서버 사이드 처리를 위해 사용",
       },
-      Docker: {
+      {
+        skill: "Docker",
         purpose: "봇을 컨테이너로 패키징하여 배포 환경 일관성 확보",
         reason: "서버 재시작에도 안정적으로 봇을 운영하기 위해 사용",
       },
-      GitHubActions: {
+      {
+        skill: "GitHub Actions",
         purpose: "CI/CD 자동화 및 서버 배포 프로세스 구성",
         reason: "개발 후 자동 빌드/배포 과정을 통해 운영 효율성 향상",
       },
-    },
+    ],
     retrospective: [
       {
         title: "슬래시 명령어와 큐 관리 구현 경험",
@@ -739,47 +767,55 @@ export const projectDetails: ProjectDetails = {
       "Chart.js 기반 지표별 시계열 그래프 구현",
       "Vuex 기반 사용자 인터랙션 반영 실시간 필터 및 정보 조회 기능",
     ],
-    skills: {
-      Python: {
+    skills: [
+      {
+        skill: "Python",
         purpose: "데이터 파싱, 정제 및 자동화된 전처리 스크립트 개발",
         reason:
           "복잡한 CSV 구조를 자동으로 정리하고 통합할 수 있도록 스크립트 기반 자동화를 위해 사용",
       },
-      Pandas: {
+      {
+        skill: "Pandas",
         purpose: "데이터 정제 및 통계 분석",
         reason:
           "누락값 처리, 열 변환, 그룹핑 등의 데이터 전처리를 효율적으로 수행하기 위해 사용",
       },
-      PostgreSQL: {
+      {
+        skill: "PostgreSQL",
         purpose: "정제된 데이터를 저장하고 쿼리를 통한 데이터 활용",
         reason:
           "구조화된 데이터 저장과 빠른 질의 응답을 위한 관계형 데이터베이스 사용",
       },
-      Vue: {
+      {
+        skill: "Vue.js",
         purpose: "대시보드 UI 구축을 위한 프론트엔드 프레임워크",
         reason:
           "컴포넌트 기반 개발로 유지보수가 용이하고, 빠르게 데이터 시각화 화면을 구성하기 위해 사용",
       },
-      Vuetify: {
+      {
+        skill: "Vuetify",
         purpose: "디자인 시스템 기반의 빠른 UI 구성",
         reason:
           "Vue에 최적화된 머티리얼 디자인 컴포넌트를 통해 일관된 UI 구현을 위해 사용",
       },
-      Vuex: {
+      {
+        skill: "VueX",
         purpose: "상태 관리 및 컴포넌트 간 데이터 공유",
         reason:
           "복잡한 데이터 흐름을 예측 가능하게 만들고, 컴포넌트 간 상태 공유를 효율적으로 처리하기 위해 사용",
       },
-      Leaflet: {
+      {
+        skill: "Leaflet.js",
         purpose: "지도 기반의 입지 데이터 시각화",
         reason:
           "공장 위치 및 밀도를 직관적으로 보여주기 위한 시각화 도구로 사용",
       },
-      ChartJS: {
+      {
+        skill: "Chart.js",
         purpose: "지표 기반 차트 시각화",
         reason: "데이터 흐름과 비교 분석을 시각적으로 표현하기 위해 사용",
       },
-    },
+    ],
     retrospective: [
       {
         title: "복잡한 CSV 전처리를 통한 데이터 통합 경험",
@@ -838,40 +874,47 @@ export const projectDetails: ProjectDetails = {
     ],
     features: [
       "브랜드별 크롤러를 모듈화하여 확장성과 유지보수 용이성 확보",
-      "일일 자동 실행을 위한 스케줄링 시스템 구성 (cron)",
+      "일일 자동 실행을 위한 스케줄링 시스템 구성",
       "카테고리/가격/색상/브랜드 기준 정규화된 DB 저장 구조 설계",
       "크롤링 실패나 구조 변경에 대응하는 예외 처리 로직 포함",
     ],
-    skills: {
-      Python: {
+    skills: [
+      {
+        skill: "Python",
         purpose: "웹 크롤러 및 데이터 가공 스크립트 구현",
         reason:
           "Scrapy, Selenium, Pandas 등 다양한 라이브러리를 활용하기 위해 선택",
       },
-      Scrapy: {
+      {
+        skill: "Scrapy",
         purpose: "크롤링 프레임워크로 브랜드별 크롤러 구성",
         reason:
           "비동기 방식의 효율적인 데이터 수집과 구조화된 코드 설계를 위해 사용",
       },
-      Selenium: {
+      {
+        skill: "Selenium",
         purpose: "동적 로딩 사이트에서의 데이터 수집",
         reason: "JavaScript 렌더링이 필요한 브랜드 페이지 크롤링을 위해 사용",
       },
-      Pandas: {
-        purpose: "데이터 정제 및 통합 처리",
+      {
+        skill: "Beautiful Soup",
+        purpose: "HTML 구조를 파싱하여 필요한 데이터 추출",
         reason:
-          "다양한 형식의 수집 데이터를 정규화된 구조로 변환하기 위해 사용",
+          "크롤링한 웹 페이지에서 원하는 정보만 정확히 선별해내기 위해 사용",
       },
-      PostgreSQL: {
+      {
+        skill: "PostgreSQL",
         purpose: "정제된 데이터의 저장 및 검색 최적화",
         reason:
           "정규화된 데이터 구조와 확장 가능한 쿼리 환경을 제공하기 위해 사용",
       },
-      cron: {
-        purpose: "일일 크롤링 자동 실행을 위한 스케줄링",
-        reason: "지속적인 데이터 수집을 자동화하기 위해 사용",
+      {
+        skill: "Pandas",
+        purpose: "데이터 정제 및 통합 처리",
+        reason:
+          "다양한 형식의 수집 데이터를 정규화된 구조로 변환하기 위해 사용",
       },
-    },
+    ],
     retrospective: [
       {
         title: "데이터 파이프라인 설계 경험",
@@ -933,34 +976,40 @@ export const projectDetails: ProjectDetails = {
       "Next.js 기반 SSR을 활용한 검색 최적화 및 초기 로딩 속도 개선",
       "Leaflet.js를 활용한 지도 기반 데이터 시각화 기능 구현",
     ],
-    skills: {
-      React: {
+    skills: [
+      {
+        skill: "React.js",
         purpose: "컴포넌트 기반 구조를 통한 UI 설계",
         reason: "재사용성과 생산성을 높이기 위해 사용",
       },
-      Vue: {
+      {
+        skill: "Vue.js",
         purpose: "직관적인 템플릿 기반 프레임워크로 유연한 구성 제공",
         reason: "빠른 구현과 유지보수가 필요한 프로젝트에 적합하여 사용",
       },
-      NextJS: {
+      {
+        skill: "Next.js",
         purpose: "SSR 및 App Router 기반의 구조적 페이지 구성",
         reason: "빠른 초기 로딩 속도 및 SEO 최적화를 위해 사용",
       },
-      TypeScript: {
+      {
+        skill: "TypeScript",
         purpose: "정적 타입으로 코드 안정성과 유지보수성 확보",
         reason: "런타임 에러 방지 및 협업 효율 향상을 위해 사용",
       },
-      ChartJS: {
+      {
+        skill: "Chart.js",
         purpose: "데이터 기반의 시각화 제공",
         reason:
           "막대, 선형, 파이 등 다양한 형태의 데이터 시각화가 가능하여 사용",
       },
-      LeafletJS: {
+      {
+        skill: "Leaflet.js",
         purpose: "지도 기반 인터페이스로 위치 기반 데이터 시각화",
         reason:
           "지역/지리적 요소를 시각적으로 표현하여 사용자의 이해도를 높이기 위해 사용",
       },
-    },
+    ],
     retrospective: [
       {
         title: "단독 개발로 얻은 전체 프로세스 경험",

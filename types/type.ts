@@ -30,11 +30,10 @@ export type Project = {
   contributions: { role: string; details: string }[];
   features: string[];
   skills: {
-    [key: string]: {
-      purpose: string;
-      reason: string;
-    };
-  };
+    skill: string;
+    purpose: string;
+    reason: string;
+  }[];
   retrospective: {
     title: string;
     content: string[];

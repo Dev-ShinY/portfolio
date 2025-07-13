@@ -127,10 +127,10 @@ export default function ProjectModal({
           >
             {/* skill 모음 */}
             <div className={clsx("flex", "gap-1", "flex-wrap")}>
-              {Object.keys(projectData.skills).map((skill) => (
+              {projectData.skills.map((skill) => (
                 <SkillChip
-                  key={skill}
-                  icon={skill}
+                  key={skill.skill}
+                  icon={skill.skill}
                   focusType={"backgroundColor"}
                 />
               ))}
