@@ -11,9 +11,12 @@ const useTextColor = (color: string): string => {
   const textColor = useMemo(() => {
     let r: number, g: number, b: number;
 
-    if (color.startsWith("rgb")) {
+    if (color.startsWith("rgba")) {
       // RGB
-      const match = color.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+      const match = color.match(
+        /^rgba\((\d+),\s*(\d+),\s*(\d+),\s*([0-9.]+)\)$/
+      );
+
       if (!match) {
         return "#000000"; // 기본값
       }
