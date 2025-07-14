@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useMemo } from "react";
-import { COLOR_ARRAY } from "@/utils/costants";
+import { COLOR_ARRAY } from "@/utils/constants";
 import { Skill } from "@/types/type";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { getMappedIcon } from "@/utils/skillMapper";
