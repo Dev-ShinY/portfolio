@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import close from "@/assets/icon-close.webp";
-import SkillChip from "../skill-chip";
+import SkillChip from "../SkillChip";
 import { useEffect, useState } from "react";
 import { Project } from "@/types/type";
 import SectionBlock from "./SectionBlock";

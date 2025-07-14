@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import IdPhoto from "@/components/UI/id-photo";
-import HighlightText from "@/components/UI/highlight-text";
-import AnimatedPointsSlider from "@/components/UI/points-slider";
-import { section1Data } from "@/data/sectionData";
+import IdPhoto from "@/components/ui/IdPhoto";
+import HighlightText from "@/components/ui/HighlightText";
+import AnimatedPointsSlider from "@/components/ui/PointsSlider";
+import { section1Data } from "@/data/section-data";
 import { Section1DataType } from "@/types/type";
 
 const sectionData: Section1DataType = section1Data;

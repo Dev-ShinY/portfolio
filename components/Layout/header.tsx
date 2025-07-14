@@ -2,9 +2,9 @@
 
 import clsx from "clsx";
 import { useScrollStore } from "@/stores/store";
-import { indexTitle } from "@/data/portfolioData";
-import DarkMode from "@/components/UI/dark-mode";
-import MoblieCategory from "@/components/Layout/mobile-category";
+import { indexTitle } from "@/data/portfolio-data";
+import DarkMode from "@/components/ui/DarkMode";
+import MoblieCategory from "@/components/layout/MobileCategory";
 
 const sections = indexTitle.map((item, index) => {
   return { title: item, id: `section${index + 1}` };

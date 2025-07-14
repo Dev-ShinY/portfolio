@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { projectDetails } from "@/data/sectionData";
+import { projectDetails } from "@/data/section-data";
 import { ProjectDetails } from "@/types/type";
 
 export async function GET(req: NextRequest) {

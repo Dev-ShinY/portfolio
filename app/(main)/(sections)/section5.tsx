@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import { githubData } from "@/data/portfolioData";
+import { githubData } from "@/data/portfolio-data";
 
 export default function Section5() {
   return (

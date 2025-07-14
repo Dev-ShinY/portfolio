@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useScrollStore } from "@/stores/store";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { indexTitle } from "@/data/portfolioData";
+import { indexTitle } from "@/data/portfolio-data";
 
 export default function ScrollIndicator() {
   const { currentIndex, setCurrentIndex } = useScrollStore();

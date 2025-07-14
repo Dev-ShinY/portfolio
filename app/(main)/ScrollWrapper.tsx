@@ -3,7 +3,7 @@
 import { motion, MotionStyle, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useScrollStore } from "@/stores/store";
-import { indexTitle } from "@/data/portfolioData";
+import { indexTitle } from "@/data/portfolio-data";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function ScrollWrapper({

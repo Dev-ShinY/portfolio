@@ -3,14 +3,14 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { section3Data } from "@/data/sectionData";
+import { section3Data } from "@/data/section-data";
 import { motion } from "framer-motion";
-import Modal from "@/components/UI/skillset-modal";
-import RotatingPentagon from "@/components/Animations/rotating-polygon";
+import Modal from "@/components/ui/SkillsetModal";
+import RotatingPentagon from "@/components/animations/RotatingPolygon";
 import {
   SlideWrapper,
   useAnimatedIndex,
-} from "@/components/Animations/slide-animation";
+} from "@/components/animations/SlideAnimation";
 
 export default function Section3() {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);

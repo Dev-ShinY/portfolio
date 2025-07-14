@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Skill } from "@/types/type";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { getMappedIcon } from "@/utils/skillMapper";
+import { mapSkillNameToIconKey } from "@/utils/map-skill-to-icon";
 import useEscapeToClear from "@/hooks/useEscapeToClear";
 
 interface ModalProps {
@@ -134,7 +134,7 @@ export default function Modal({
                   onClick={() => setSelectedIdx(index)}
                 >
                   <img
-                    src={`/api/skill-icon?icon=${getMappedIcon(
+                    src={`/api/skill-icon?icon=${mapSkillNameToIconKey(
                       item.name
                     )}&theme=${theme}`}
                     alt={item.name}

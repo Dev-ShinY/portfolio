@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import { getMappedIcon } from "@/utils/skillMapper";
+import { mapSkillNameToIconKey } from "@/utils/map-skill-to-icon";
 import { useDominantColor } from "@/hooks/useDominantColor";
 import useTextColor from "@/hooks/useTextColor";
 
@@ -14,8 +14,10 @@ export default function SkillChip({
   focusType?: string;
 }) {
   const theme = "dark";
-  const imgSrc = `/api/skill-icon?icon=${getMappedIcon(icon)}&theme=${theme}`;
-  const dominantColor = useDominantColor(getMappedIcon(icon));
+  const imgSrc = `/api/skill-icon?icon=${mapSkillNameToIconKey(
+    icon
+  )}&theme=${theme}`;
+  const dominantColor = useDominantColor(mapSkillNameToIconKey(icon));
   const textColor = useTextColor(dominantColor);
 
   const variants = {

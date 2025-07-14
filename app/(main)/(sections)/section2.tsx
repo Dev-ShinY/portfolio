@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import React from "react";
 import { motion } from "framer-motion";
-import { section2Data } from "@/data/sectionData";
+import { section2Data } from "@/data/section-data";
 
 export default function Section2() {
   const getStyledText = (text: string) => {

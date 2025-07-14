@@ -1,4 +1,4 @@
-import Projects from "@/components/UI/projects";
+import Projects from "@/components/ui/Projects";
 import clsx from "clsx";
 
 export default function Section4() {

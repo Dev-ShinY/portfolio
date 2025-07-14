@@ -1,4 +1,9 @@
-const skills = [
+interface SkillIconMapping {
+  icon: string;
+  name: string;
+}
+
+const skillIconMappings: SkillIconMapping[] = [
   { icon: "vue", name: "Vue.js" },
   { icon: "js", name: "Javascript" },
   { icon: "vuetify", name: "Vuetify" },
@@ -45,13 +50,14 @@ const skills = [
  * @param {string} inputName - 사용자가 입력한 아이콘명
  * @returns {string} - 매칭된 아이콘명
  */
-export function getMappedIcon(inputName: string): string {
-  const lowerInput = inputName.toLowerCase().replace(" ", "");
-  const matchedSkill = skills.find(
-    (skill) =>
-      skill.icon.toLowerCase().replace(" ", "") === lowerInput ||
-      skill.name.toLowerCase().replace(" ", "") === lowerInput
+export function mapSkillNameToIconKey(skillName: string): string {
+  const normalizedSkillName = skillName.toLowerCase().replace(/\s+/g, "");
+
+  const matchedMapping = skillIconMappings.find(
+    (mapping) =>
+      mapping.icon.toLowerCase().replace(/\s+/g, "") === normalizedSkillName ||
+      mapping.name.toLowerCase().replace(/\s+/g, "") === normalizedSkillName
   );
 
-  return matchedSkill ? matchedSkill.icon : inputName;
+  return matchedMapping ? matchedMapping.icon : skillName;
 }

@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import ScrollWrapper from "./scroll-wrapper";
-import Header from "@/components/Layout/header";
-import ScrollIndicator from "@/components/UI/scroll-indicator";
-import EmailAccessButton from "@/components/UI/email-access-button";
+import ScrollWrapper from "./ScrollWrapper";
+import Header from "@/components/layout/Header";
+import ScrollIndicator from "@/components/ui/ScrollIndicator";
+import EmailAccessButton from "@/components/ui/EmailAccessButton";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

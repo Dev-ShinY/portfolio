@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-import { mailData } from "@/data/portfolioData";
+import { mailData } from "@/data/portfolio-data";
 import clsx from "clsx";
 
 export default function EmailAccessButton() {

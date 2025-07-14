@@ -4,7 +4,7 @@ import clsx from "clsx";
 import {
   SlideWrapper,
   useAnimatedIndex,
-} from "@/components/Animations/slide-animation";
+} from "@/components/animations/SlideAnimation";
 import { Points } from "@/types/type";
 import { motion } from "framer-motion";
 

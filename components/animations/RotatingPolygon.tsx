@@ -6,7 +6,7 @@ import { useMemo } from "react";
 import { COLOR_ARRAY } from "@/utils/constants";
 import { Skill } from "@/types/type";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { getMappedIcon } from "@/utils/skillMapper";
+import { mapSkillNameToIconKey } from "@/utils/map-skill-to-icon";
 
 export default function RotatingPentagon({
   skills,
@@ -118,7 +118,7 @@ export default function RotatingPentagon({
                   fill={COLOR_ARRAY[index % COLOR_ARRAY.length]}
                 />
                 <image
-                  href={`/api/skill-icon?icon=${getMappedIcon(
+                  href={`/api/skill-icon?icon=${mapSkillNameToIconKey(
                     skill.name
                   )}&theme=${theme}`}
                   width={imgSize}

@@ -1,11 +1,11 @@
 "use client";
 
 import clsx from "clsx";
-import SkillChip from "@/components/UI/skill-chip";
-import { projects } from "@/data/sectionData";
+import SkillChip from "@/components/ui/SkillChip";
+import { projects } from "@/data/section-data";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import ProjectModal from "./project-modal/project-modal";
+import ProjectModal from "./project-modal/ProjectModal";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function Projects() {
