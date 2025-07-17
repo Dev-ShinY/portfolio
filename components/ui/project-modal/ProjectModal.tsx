@@ -226,21 +226,19 @@ export default function ProjectModal({
 
             {/* skills */}
             <SectionBlock title="사용 기술 및 언어" icon="🔨">
-              {Object.entries(projectData.skills).map(
-                ([skill, info], index) => (
-                  <LabelBlock
-                    key={index}
-                    title={skill}
-                    content={
-                      <>
-                        <b>{info.purpose}</b>
-                        <br />
-                        <span>· {info.reason}</span>
-                      </>
-                    }
-                  />
-                )
-              )}
+              {projectData.skills.map((item, index) => (
+                <LabelBlock
+                  key={index}
+                  title={item.skill}
+                  content={
+                    <>
+                      <b>{item.purpose}</b>
+                      <br />
+                      <span>· {item.reason}</span>
+                    </>
+                  }
+                />
+              ))}
             </SectionBlock>
 
             {/* retrospective */}
