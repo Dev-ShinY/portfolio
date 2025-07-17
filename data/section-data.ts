@@ -51,17 +51,17 @@ export const section3Data = {
       title: "Vue.js로 시작한 프론트엔드 개발 여정",
       subTitle: "Vue.js",
       description:
-        "Vue.js를 활용하여 컴포넌트 기반 아키텍처를 익히고, Vuetify를 사용한 UI 구축을 경험했습니다. 반응형 데이터 바인딩과 상태 관리를 적용하며, 유지보수성이 뛰어난 웹 애플리케이션을 개발했습니다.",
+        "Vue.js의 컴포넌트 기반 아키텍처로 구조를 설계하고, Vuetify를 활용해 Material Design UI를 빠르게 구축했습니다. 반응형 데이터 바인딩과 Vuex 전역 상태 관리로 유지보수성과 확장성을 확보했습니다.",
       skills: [
         {
           name: "Vue.js",
           description:
-            "컴포넌트 기반 개발 방식과 Vue의 반응형 시스템을 활용하여 효율적인 UI를 구축했습니다.",
+            "컴포넌트 기반 패턴과 반응형 시스템을 적용해 재사용성 높고 유연한 UI를 구현했습니다.",
         },
         {
-          name: "Javascript",
+          name: "JavaScript",
           description:
-            "ES6+ 문법을 활용해 동적 기능을 구현하고, 성능 최적화 기법을 적용했습니다.",
+            "ES6+ 문법으로 가독성을 높이고, 비동기 로직과 성능 최적화 기법을 적용했습니다.",
         },
         {
           name: "Vuetify",
@@ -69,19 +69,18 @@ export const section3Data = {
             "Vuetify를 사용하여 빠르고 일관된 Material Design UI를 설계했습니다.",
         },
         {
-          name: "VueX",
+          name: "Vuex",
           description:
-            "전역 상태 관리를 Vuex로 구현하여 데이터 흐름을 효율적으로 관리했습니다.",
+            "전역 상태 저장소를 Vuex로 구성해 복잡한 데이터 흐름을 직관적으로 관리했습니다.",
         },
         {
           name: "Netlify",
           description:
-            "Netlify를 활용한 자동 배포 환경을 구축하고, CI/CD를 적용했습니다.",
+            "Git 연동 자동 배포를 설정해, 푸시만으로 실시간으로 사이트를 배포하고 Preview 환경을 제공했습니다.",
         },
         {
           name: "AWS",
-          description:
-            "AWS S3와 CloudFront로 정적 파일을 배포하고, Lambda를 활용한 서버리스 환경을 구현했습니다.",
+          description: "AWS S3와 CloudFront로 정적 파일을 배포했습니다.",
         },
       ],
     },
@@ -89,17 +88,17 @@ export const section3Data = {
       title: "React.js와 상태 관리로 확장한 프론트엔드 개발",
       subTitle: "React.js",
       description:
-        "React의 선언형 UI 패턴을 활용하여 재사용성이 높은 컴포넌트를 제작했습니다. Redux를 통한 상태 관리와 Bootstrap을 이용한 반응형 디자인을 적용하여 사용자 경험을 최적화했습니다.",
+        "React의 선언형 UI로 컴포넌트를 설계하고, Redux로 전역 상태를 일관되게 관리했습니다. Bootstrap을 이용해 반응형 레이아웃을 빠르게 구현하며 사용자 경험을 개선했습니다.",
       skills: [
         {
           name: "React.js",
           description:
-            "컴포넌트 기반 구조와 상태 관리를 적용하여 유지보수성을 높였습니다.",
+            "JSX와 Hook을 활용해 재사용 가능한 컴포넌트 계층 구조를 설계했습니다.",
         },
         {
           name: "Javascript",
           description:
-            "이벤트 핸들링과 비동기 처리 최적화를 통해 성능을 개선했습니다.",
+            "이벤트 핸들링과 비동기 처리 패턴을 최적화해 렌더링 성능을 개선했습니다.",
         },
         {
           name: "Bootstrap",
@@ -109,12 +108,12 @@ export const section3Data = {
         {
           name: "Redux",
           description:
-            "Redux를 활용하여 전역 상태를 체계적으로 관리하고, 복잡한 데이터 흐름을 최적화했습니다.",
+            "Redux Toolkit을 활용해 액션·리듀서를 단순화하고, 미들웨어로 비동기 로직을 관리했습니다.",
         },
         {
           name: "AWS",
           description:
-            "AWS Amplify를 사용하여 React 프로젝트를 클라우드 환경에 배포했습니다.",
+            "AWS Amplify를 이용해 React 앱을 빠르게 호스팅하고, 인증·API 연동을 자동화했습니다.",
         },
       ],
     },
@@ -122,7 +121,7 @@ export const section3Data = {
       title: "Next.js를 활용한 SSR과 SEO 최적화",
       subTitle: "Next.js",
       description:
-        "Next.js의 서버사이드 렌더링(SSR)과 정적 사이트 생성(SSG)을 활용하여 성능과 SEO를 최적화했습니다. Tailwind CSS와 Zustand를 결합하여 스타일과 상태 관리를 효율적으로 개선했습니다.",
+        "Next.js의 SSR·SSG 기능으로 초기 로딩 속도와 SEO를 최적화했고, Tailwind CSS와 Zustand를 결합해 스타일과 상태 관리를 간결하게 유지했습니다.",
       skills: [
         {
           name: "Next.js",
@@ -131,17 +130,18 @@ export const section3Data = {
         },
         {
           name: "TypeScript",
-          description: "타입 안정성을 보장하여 유지보수성을 향상시켰습니다.",
+          description:
+            "정적 타입 도입으로 코드 안정성과 협업 효율성을 높였습니다.",
         },
         {
           name: "Tailwind CSS",
           description:
-            "유틸리티 퍼스트(Utility-First) 접근 방식으로 디자인을 효율적으로 적용했습니다.",
+            "유틸리티 클래스 기반으로 반응형 디자인을 빠르게 적용하고 유지보수성을 개선했습니다.",
         },
         {
           name: "Zustand",
           description:
-            "가벼운 상태 관리 라이브러리를 활용하여 전역 상태를 효과적으로 관리했습니다.",
+            "가벼운 전역 상태 관리로 컴포넌트 간 데이터 공유를 효율적으로 처리했습니다.",
         },
         {
           name: "GraphQL",
@@ -151,12 +151,12 @@ export const section3Data = {
         {
           name: "Framer Motion",
           description:
-            "부드러운 UI 애니메이션을 추가하여 사용자 경험을 향상시켰습니다.",
+            "페이지 전환 및 인터랙션에 자연스러운 애니메이션을 추가해 사용자 몰입도를 높였습니다.",
         },
         {
           name: "Vercel",
           description:
-            "Vercel을 활용하여 빠르고 안정적인 Next.js 프로젝트 배포 환경을 구축했습니다.",
+            "Git 연동 자동 배포를 설정해 Preview 환경과 Production 환경을 무중단 릴리즈로 운영했습니다.",
         },
       ],
     },
@@ -164,7 +164,7 @@ export const section3Data = {
       title: "데이터 시각화 및 맵 서비스 활용",
       subTitle: "라이브러리",
       description:
-        "Leaflet.js를 활용한 지도 시각화와 Chart.js를 이용한 데이터 분석을 통해 인터랙티브한 UI를 구축했습니다.",
+        "Leaflet.js로 지도를 커스터마이징하고, Chart.js로 동적 차트를 구현해 대화형 데이터를 효과적으로 시각화했습니다.",
       skills: [
         {
           name: "Leaflet.js",
@@ -178,12 +178,13 @@ export const section3Data = {
         },
         {
           name: "Chart.js",
-          description: "데이터 시각화를 위한 동적인 그래프를 구현했습니다.",
+          description:
+            "라인·바·파이 차트를 유연하게 구성하고, 사용자 조작 이벤트를 처리했습니다.",
         },
         {
           name: "Sheet.js",
           description:
-            "엑셀 파일을 다루기 위한 데이터 처리 로직을 개발했습니다.",
+            "엑셀 파일을 파싱·생성하는 로직을 구현해 대량 데이터 입출력을 처리했습니다.",
         },
       ],
     },
@@ -191,7 +192,7 @@ export const section3Data = {
       title: "백엔드 연동 및 데이터 처리 경험",
       subTitle: "분석/적재",
       description:
-        "Python 기반의 FastAPI를 활용하여 백엔드 API를 개발하고, PostgreSQL을 이용한 데이터 저장 및 처리 로직을 설계했습니다.",
+        "FastAPI로 RESTful API를 구축하고, PostgreSQL에 데이터를 스키마 기반으로 저장했습니다. Scrapy·Pandas를 활용해 웹 크롤링과 전처리 자동화를 구현했습니다.",
       skills: [
         {
           name: "Python",
@@ -201,21 +202,22 @@ export const section3Data = {
         {
           name: "PostgreSQL",
           description:
-            "관계형 데이터베이스를 설계하고, 최적화된 SQL 쿼리를 작성했습니다.",
+            "테이블 스키마 설계와 인덱싱으로 대용량 데이터 쿼리 성능을 최적화했습니다.",
         },
         {
           name: "Jupyter",
           description:
-            "데이터 분석 및 머신러닝 모델 실험을 위한 환경을 구축했습니다.",
+            "데이터 분석 노트북을 통해 시각화와 모델 실험 환경을 구축했습니다.",
         },
         {
           name: "Scrapy",
-          description: "웹 크롤러를 개발하여 대량의 데이터를 수집했습니다.",
+          description:
+            "비동기 크롤러를 구현해 대량의 웹 데이터를 안정적으로 수집했습니다.",
         },
         {
           name: "Pandas",
           description:
-            "데이터 처리 및 분석을 수행하여 비즈니스 인사이트를 도출했습니다.",
+            "데이터프레임 기반 전처리로 누락값 처리·그룹핑·통계 분석을 자동화했습니다.",
         },
         {
           name: "FastAPI",
@@ -225,7 +227,7 @@ export const section3Data = {
         {
           name: "Postman",
           description:
-            "API 테스트 및 문서화를 진행하여 개발 효율성을 향상시켰습니다.",
+            "API 테스트 스크립트를 작성해 엔드포인트 동작을 검증하고 문서화했습니다.",
         },
       ],
     },
@@ -233,17 +235,32 @@ export const section3Data = {
       title: "협업과 배포를 위한 DevOps 경험",
       subTitle: "ETC",
       description:
-        "GitHub을 활용한 협업과 Docker를 이용한 컨테이너 기반 환경을 구축하여 지속적 통합/배포(CI/CD) 파이프라인을 설계했습니다.",
+        "GitHub Actions를 중심으로 AWS·Vercel·Netlify를 연동하여 CI/CD 파이프라인을 구성했습니다.",
       skills: [
         {
-          name: "GitHub",
+          name: "GitHub Actions",
           description:
-            "Git을 활용한 버전 관리 및 협업을 통해 효율적인 개발 프로세스를 운영했습니다.",
+            "PR 생성 시 린트·테스트·빌드를 자동 실행하고, 메인 브랜치 머지 후에는 배포 워크플로우가 트리거되도록 설정해 개발→배포 과정을 완전 자동화했습니다.",
+        },
+        {
+          name: "Vercel",
+          description:
+            "Git 브랜치별 자동 배포를 설정해 메인 브랜치는 프로덕션에, develop 브랜치는 베타 환경에 연결함으로써 안정적인 배포 전략을 운영했습니다.",
+        },
+        {
+          name: "Netlify",
+          description:
+            "Vercel과 유사하게 Git 연동 자동 배포를 구성하고, 브랜치 기반 Preview 환경을 분리하여 QA·테스트가 독립적으로 이루어지도록 했습니다.",
+        },
+        {
+          name: "AWS",
+          description:
+            "EventBridge 스케줄러를 이용해 주기적으로 데이터 수집 파이프라인을 트리거하고, Lambda로 전처리 후 S3에 적재하는 자동화 워크플로우를 구축했습니다.",
         },
         {
           name: "Docker",
           description:
-            "컨테이너 기반의 환경을 구축하여 개발 및 배포 과정을 자동화했습니다.",
+            "개인 서버에 멀티스테이지 Docker 이미지를 배포해 개발·테스트 환경을 동일하게 유지함으로써 배포 오류를 최소화했습니다.",
         },
       ],
     },
